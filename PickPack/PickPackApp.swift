@@ -20,9 +20,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct PickPackApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    // 사용자 Auth 관리
+    @StateObject var authManager: AuthManager = AuthManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authManager)
         }
     }
 }

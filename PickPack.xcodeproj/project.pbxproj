@@ -19,6 +19,9 @@
 		FBBA97492C38265A00473B51 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FBBA97482C38265A00473B51 /* FirebaseAuth */; };
 		FBBA974B2C38265A00473B51 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FBBA974A2C38265A00473B51 /* FirebaseFirestore */; };
 		FBBA974D2C38265A00473B51 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBBA974C2C38265A00473B51 /* FirebaseFirestoreSwift */; };
+		FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA974F2C3C20E200473B51 /* AuthManager.swift */; };
+		FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97522C43B89000473B51 /* SignUpView.swift */; };
+		FBBA97552C43C0A500473B51 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97542C43C0A500473B51 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FBBA97332C3821E700473B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBA97362C3821E700473B51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBBA974F2C3C20E200473B51 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		FBBA97522C43B89000473B51 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FBBA97542C43C0A500473B51 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,8 @@
 		FBBA972E2C3821E500473B51 /* PickPack */ = {
 			isa = PBXGroup;
 			children = (
+				FBBA97512C43B88300473B51 /* View */,
+				FBBA974E2C3C20B700473B51 /* Manager */,
 				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97332C3821E700473B51 /* Assets.xcassets */,
@@ -82,6 +90,23 @@
 				FBBA97362C3821E700473B51 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FBBA974E2C3C20B700473B51 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FBBA974F2C3C20E200473B51 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FBBA97512C43B88300473B51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBBA97522C43B89000473B51 /* SignUpView.swift */,
+				FBBA97542C43C0A500473B51 /* MainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
+				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,
+				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

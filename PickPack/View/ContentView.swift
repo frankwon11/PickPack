@@ -6,21 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @EnvironmentObject var authManager: AuthManager
     
     var body: some View {
-        
         NavigationStack {
             VStack {
                 if authManager.authState == .signedIn {
-                    mainView()
+                    MainView()
                 } else {
                     SignInView()
                 }
             }
-            .padding(.horizontal)
+            .onAppear {
+                if Auth.auth().currentUser != nil {
+                    authManager.authState = .signedIn
+                }
+            }
         }
         
     }

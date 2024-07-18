@@ -22,6 +22,7 @@
 		FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA974F2C3C20E200473B51 /* AuthManager.swift */; };
 		FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97522C43B89000473B51 /* SignUpView.swift */; };
 		FBBA97552C43C0A500473B51 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97542C43C0A500473B51 /* MainView.swift */; };
+		FBBA97572C43C18100473B51 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97562C43C18100473B51 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FBBA974F2C3C20E200473B51 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		FBBA97522C43B89000473B51 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FBBA97542C43C0A500473B51 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBBA97562C43C18100473B51 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,6 @@
 				FBBA97512C43B88300473B51 /* View */,
 				FBBA974E2C3C20B700473B51 /* Manager */,
 				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
-				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97332C3821E700473B51 /* Assets.xcassets */,
 				FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */,
 				FBBA97352C3821E700473B51 /* Preview Content */,
@@ -103,8 +104,10 @@
 		FBBA97512C43B88300473B51 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FBBA97522C43B89000473B51 /* SignUpView.swift */,
+				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
+				FBBA97522C43B89000473B51 /* SignUpView.swift */,
+				FBBA97562C43C18100473B51 /* SignInView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBA97572C43C18100473B51 /* SignInView.swift in Sources */,
 				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,

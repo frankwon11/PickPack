@@ -13,6 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            // 로그인 분기 처리
             VStack {
                 if authManager.authState == .signedIn {
                     MainView()

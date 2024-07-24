@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA972F2C3821E500473B51 /* PickPackApp.swift */; };
 		FBBA97322C3821E500473B51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97312C3821E500473B51 /* ContentView.swift */; };
 		FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97332C3821E700473B51 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FBBA972C2C3821E500473B51 /* PickPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBA972F2C3821E500473B51 /* PickPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPackApp.swift; sourceTree = "<group>"; };
 		FBBA97312C3821E500473B51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
 				FBBA97522C43B89000473B51 /* SignUpView.swift */,
 				FBBA97562C43C18100473B51 /* SignInView.swift */,
+				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,
+				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 			);

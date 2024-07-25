@@ -20,7 +20,8 @@ struct MainView: View {
             Spacer().frame(height: 66)
         
 //            CarouselView(pageCount: 2)
-            TicketView()
+//            TicketView()
+            EmptyTicketView()
             
             Spacer()
             
@@ -138,6 +139,7 @@ extension MainView {
         .frame(height: 50)
     }
 }
+
 #Preview {
     MainView()
 }

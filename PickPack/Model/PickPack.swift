@@ -7,161 +7,109 @@
 
 import SwiftUI
 
-enum RoomColor: String {
-    case red
-    case blue
-    case green
-    case yellow
-    case purple
+enum RoomColor: Int {
+    case red = 0
+    case green = 1
+    case teal = 2
+    case blue = 3
+    case indigo = 4
+    case purple = 5
+    case pink = 6
 
-    var color: Color {
+    var num: Color {
         switch self {
         case .red:
             return Color.red
-        case .blue:
-            return Color.blue
         case .green:
             return Color.green
-        case .yellow:
-            return Color.yellow
+        case .teal:
+            return Color.teal
+        case .blue:
+            return Color.blue
         case .purple:
             return Color.purple
+        case .indigo:
+            return Color.indigo
+        case .pink:
+            return Color.pink
         }
     }
 }
 
-class Room: ObservableObject {
-    var roomId: String = UUID().uuidString // 룸 아이디
-    var roomCode: String // 룸 입장코드
+struct Room: Codable, Identifiable, Hashable {
+    var id: String = UUID().uuidString // 룸 아이디
+    var invitationCode: String // 룸 입장코드
+    var constructorId: String // 리더 멤버 아이디
+    var name: String // 룸 이름
+    var defaultColor: Int = 0 // 방 기본 색상
+    var startDate1970TimeInterval: String // 여행 시작일
+    var endDate1970TimeInterval: String // 여행 종료일
+    var memberIdList: [String] = [] // 여행 멤버 리스트
+    var sharedItemList: [SharedItem] = [] // 공유 아이템 리스트
     
-    @Published var leaderId: String // 리더 멤버 아이디
-    @Published var roomName: String // 룸 이름
-    @Published var defaultColor: RoomColor = .blue // 방 기본 색상
-    @Published var startDate: Date // 여행 시작일
-    @Published var endDate: Date // 여행 종료일
-    
-    @Published var memberList: [Member] = [] // 여행 멤버 리스트
-    @Published var sharedList: [SharedItem] = [] // 공유 아이템 리스트
-    
-    init(roomCode: String, leaderId: String, roomName: String, defaultColor: RoomColor, startDate: Date, endDate: Date) {
-        self.roomCode = roomCode // 룸 코드 생성 코드
-        self.leaderId = leaderId
-        self.roomName = roomName
-        self.defaultColor = defaultColor
-        self.startDate = startDate
-        self.endDate = endDate
-    }
-    
-    // 멤버 추가, 삭제, 수정
-    func appendMember() {
-        objectWillChange.send()
-    }
-    
-    func updateMember() {
-        objectWillChange.send()
-    }
-    
-    func deleteMember() {
-        objectWillChange.send()
-    }
-    
-    // 공유 아이템 추가, 삭제, 수정
-    func appendSharedItem() {
-        objectWillChange.send()
-    }
-    
-    func updateSharedItem() {
-        objectWillChange.send()
-    }
-    
-    func deleteSharedItem() { // 아직 의문
-        objectWillChange.send()
-    }
-    
-    // 방 정보 변경
-    func updateRoomInfo() {
-        objectWillChange.send()
-    }
-    
+    enum CodingKeys: String, CodingKey {
+           case id = "id"
+           case invitationCode = "code"
+           case constructorId = "constructorId"
+           case name = "name"
+           case defaultColor = "defaultColor"
+           case startDate1970TimeInterval = "startDate1970TimeInterval"
+           case endDate1970TimeInterval = "endDate1970TimeInterval"
+           case memberIdList = "memberIdList"
+           case sharedItemList = "sharedItemList"
+       }
 }
 
-class Member: ObservableObject, Identifiable {
-    var userId: String = UUID().uuidString // 유저 아이디
-    let joinedDate: Date
+struct Member: Codable, Identifiable, Hashable {
+    var id: String = UUID().uuidString // 유저 아이디
+    var name: String // 유저 이름
+    var roomColor: Int = 0
     
-    @Published var userName: String // 유저 이름
-    @Published var profileImage: UIImage // 유저 프로필 사진
-    @Published var roomColor: RoomColor
-    @Published var myItemList: [MyItem] = []
-    
-    init(userName: String, profileImage: UIImage, joinedDate: Date, roomColor: RoomColor, myItemList: [MyItem]) {
-        self.userName = userName
-        self.profileImage = profileImage
-        self.joinedDate = joinedDate
-        self.roomColor = roomColor
-        self.myItemList = myItemList
-    }
-    
-    // 아이템 추가, 삭제, 수정
-    func appendItem() {
-        objectWillChange.send()
-    }
-    
-    func deleteItem() {
-        objectWillChange.send()
-    }
-    
-    func updateItem(){
-        objectWillChange.send()
-    }
-    
-    // 멤버 정보 변경
-    func updateMemberInfo() {
-        objectWillChange.send()
-    }
-    
-}
-
-class SharedItem: ObservableObject, Identifiable {
-    var itemId: String = UUID().uuidString // 아이템 아이디
-    
-    @Published var sharedMen: [Member] = [] // 공유하는 멤버
-    @Published var owner: Member? // 아이템을 챙길 사람
-    
-    init() {}
-    
-    // 공유하는 멤버 추가, 삭제
-    func appendMember() {
-        objectWillChange.send()
-    }
-    
-    func deleteMember() {
-        objectWillChange.send()
-    }
-    
-    // 챙길 사람 설정
-    func setOwner() {
-        objectWillChange.send()
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case roomColor = "roomColor"
     }
 }
 
-class MyItem: ObservableObject, Identifiable {
-    let itemId: String = UUID().uuidString // 아이템 아이디
+struct SharedItem: Codable, Identifiable, Hashable {
+    var id: String = UUID().uuidString // 아이템 아이디
+    var sharedMemberId: [String] = [] // 공유하는 멤버
+    var owner: Member? // 아이템을 챙길 사람
     
-    @Published var isHidden: Bool = false // 숨김 여부
-    @Published var isPacked: Bool = false // 챙김 여부
-    @Published var isShared: Bool = false // 공유 여부
-    @Published var quantity: Int = 1 // 아이템 개수
-    
-    init() {}
-    
-    convenience init(quantity: Int){
-        self.init()
-        self.quantity = quantity
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case sharedMemberId = "sharedMemberId"
+        case owner = "owner"
     }
+}
+
+struct Item: Codable, Identifiable, Hashable {
+    var id: String = UUID().uuidString // 아이템 아이디
+    var isHidden: Bool = false // 숨김 여부
+    var isPacked: Bool = false // 챙김 여부
+    var isShared: Bool = false // 공유 여부
+    var quantity: Int = 1 // 아이템 개수
     
-    // 아이템 상태 설정
-    func setMyItem() {
-        objectWillChange.send()
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case isHidden = "isHidden"
+        case isPacked = "isPacked"
+        case isShared = "isShared"
+        case quantity = "quantity"
+    }
+}
+
+struct ItemList: Codable, Identifiable, Hashable {
+    var id: String = UUID().uuidString // 아이템 리스트 아이디
+    var memberId: String // 소유한 멤버 아이디
+    var roomId: String // 아이템 리스트가 속한 방
+    var items: [Item] = []
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case memberId = "memberId"
+        case roomId = "roomId"
+        case items = "items"
     }
 }

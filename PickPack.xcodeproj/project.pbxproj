@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332ACA472C57A96700CC4A70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332ACA462C57A96700CC4A70 /* NetworkManager.swift */; };
+		332ACA492C57A98500CC4A70 /* FirebaseTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332ACA482C57A98500CC4A70 /* FirebaseTestView.swift */; };
+		332ACA4C2C57A99200CC4A70 /* PickPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332ACA4B2C57A99200CC4A70 /* PickPack.swift */; };
 		FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA972F2C3821E500473B51 /* PickPackApp.swift */; };
 		FBBA97322C3821E500473B51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97312C3821E500473B51 /* ContentView.swift */; };
 		FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97332C3821E700473B51 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		332ACA462C57A96700CC4A70 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		332ACA482C57A98500CC4A70 /* FirebaseTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTestView.swift; sourceTree = "<group>"; };
+		332ACA4B2C57A99200CC4A70 /* PickPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPack.swift; sourceTree = "<group>"; };
 		FBBA972C2C3821E500473B51 /* PickPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBA972F2C3821E500473B51 /* PickPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPackApp.swift; sourceTree = "<group>"; };
 		FBBA97312C3821E500473B51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		332ACA4A2C57A99200CC4A70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				332ACA4B2C57A99200CC4A70 /* PickPack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FBBA97232C3821E500473B51 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +89,7 @@
 		FBBA972E2C3821E500473B51 /* PickPack */ = {
 			isa = PBXGroup;
 			children = (
+				332ACA4A2C57A99200CC4A70 /* Model */,
 				FBBA97512C43B88300473B51 /* View */,
 				FBBA974E2C3C20B700473B51 /* Manager */,
 				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
@@ -97,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBA974F2C3C20E200473B51 /* AuthManager.swift */,
+				332ACA462C57A96700CC4A70 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -108,6 +124,7 @@
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
 				FBBA97522C43B89000473B51 /* SignUpView.swift */,
 				FBBA97562C43C18100473B51 /* SignInView.swift */,
+				332ACA482C57A98500CC4A70 /* FirebaseTestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,8 +214,11 @@
 			files = (
 				FBBA97572C43C18100473B51 /* SignInView.swift in Sources */,
 				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
+				332ACA4C2C57A99200CC4A70 /* PickPack.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
+				332ACA472C57A96700CC4A70 /* NetworkManager.swift in Sources */,
 				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,
+				332ACA492C57A98500CC4A70 /* FirebaseTestView.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 			);

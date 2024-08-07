@@ -10,7 +10,8 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var authManager: AuthManager
     
-    let tickets: [TicketView] = [TicketView(), TicketView()]
+    @State private var currentIndex = 0
+    
     var body: some View {
         VStack {
             headerView
@@ -19,9 +20,10 @@ struct MainView: View {
 
             Spacer().frame(height: 66)
         
-//            CarouselView(pageCount: 2)
-//            TicketView()
-            EmptyTicketView()
+            // TODO: 티켓 분기 처리.
+            // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
+            CarouselView()
+                .padding(.horizontal, -20)
             
             Spacer()
             
@@ -71,18 +73,20 @@ extension MainView {
                 // TODO: 여행 추가 페이지로 이동; 네비게이션 링크로 변경
             } label: {
                 Image(systemName: "plus.square.dashed")
-                    .font(.title2)
+                    .font(.system(size: 26))
                     .fontWeight(.regular)
                     .foregroundColor(.black)
+                    .padding(10)
             }
             
             Button {
                 // TODO: 알림 페이지로 이동; 네비게이션 링크로 변경
             } label: {
                 Image(systemName: "bell")
-                    .font(.title2)
+                    .font(.system(size: 26))
                     .fontWeight(.regular)
                     .foregroundColor(.black)
+                    .padding(10)
             }
         }
     }
@@ -140,6 +144,6 @@ extension MainView {
     }
 }
 
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}

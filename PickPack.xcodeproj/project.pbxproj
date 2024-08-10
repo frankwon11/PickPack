@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */; };
+		33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD72C67662600DECDC3 /* KeychainHelper.swift */; };
+		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -29,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
+		33388CD52C6760DB00DECDC3 /* PickPack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
+		33388CD72C67662600DECDC3 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -62,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33388CD62C67661600DECDC3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				33388CD72C67662600DECDC3 /* KeychainHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		FBBA97232C3821E500473B51 = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +96,11 @@
 		FBBA972E2C3821E500473B51 /* PickPack */ = {
 			isa = PBXGroup;
 			children = (
+				33388CD52C6760DB00DECDC3 /* PickPack.entitlements */,
 				FBBA97512C43B88300473B51 /* View */,
 				FBBA974E2C3C20B700473B51 /* Manager */,
 				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
+				33388CD62C67661600DECDC3 /* Helper */,
 				FBBA97332C3821E700473B51 /* Assets.xcassets */,
 				FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */,
 				FBBA97352C3821E700473B51 /* Preview Content */,
@@ -103,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBA974F2C3C20E200473B51 /* AuthManager.swift */,
+				33388CD92C67747700DECDC3 /* AppleAuthManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -117,6 +135,7 @@
 				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
 				FB16D4662C52AC7D00FD2F7E /* TicketView.swift */,
 				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
+				33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,10 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
 				FBBA97572C43C18100473B51 /* SignInView.swift in Sources */,
+				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
 				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
+				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
 				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
@@ -343,10 +365,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PickPack/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Preview Content\"";
-				DEVELOPMENT_TEAM = 2UWGKS2UN5;
+				DEVELOPMENT_TEAM = 6FFZZTFJHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,10 +396,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PickPack/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Preview Content\"";
-				DEVELOPMENT_TEAM = 2UWGKS2UN5;
+				DEVELOPMENT_TEAM = 6FFZZTFJHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -383,6 +408,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

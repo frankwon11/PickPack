@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var authManager: AuthManager
-    
+    @EnvironmentObject var authManager: AppleAuthManager
     @State private var currentIndex = 0
     
     var body: some View {
@@ -28,14 +27,16 @@ struct MainView: View {
             Spacer()
             
             Button {
-                Task {
-                       do {
-                           try await authManager.authSignOut()
-                       }
-                       catch {
-                           print("Error: \(error)")
-                       }
-                   }
+                KeychainHelper.shared.deleteUserIdentifier()
+                authManager.authState = .signedOut
+//                Task {
+//                       do {
+//                           try await authManager.authSignOut()
+//                       }
+//                       catch {
+//                           print("Error: \(error)")
+//                       }
+//                   }
             } label: {
                 Text("로그아웃")
             }
@@ -62,10 +63,10 @@ extension MainView {
                     Circle()
                 )
             
-            Text("\(authManager.user?.displayName)")
-                .font(.headline)
-                .fontWeight(.medium)
-                .foregroundColor(.black)
+//            Text(authManager.user?.displayName ?? "no user")
+//                .font(.headline)
+//                .fontWeight(.medium)
+//                .foregroundColor(.black)
             
             Spacer()
             

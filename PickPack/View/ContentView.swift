@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    @EnvironmentObject var authManager: AuthManager
+    @EnvironmentObject var authManager: AppleAuthManager
     
     var body: some View {
         NavigationStack {
@@ -18,13 +18,11 @@ struct ContentView: View {
                 if authManager.authState == .signedIn {
                     MainView()
                 } else {
-                    SignInView()
+                    AppleLoginView()
                 }
             }
             .onAppear {
-                if Auth.auth().currentUser != nil {
-                    authManager.authState = .signedIn
-                }
+                authManager.checkForExistingUser()
             }
         }
         

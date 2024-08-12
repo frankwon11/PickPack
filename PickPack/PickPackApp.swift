@@ -21,7 +21,7 @@ struct PickPackApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     // 사용자 Auth 관리
-    @StateObject var authManager: AuthManager = AuthManager()
+    @StateObject var authManager: AppleAuthManager = AppleAuthManager()
     
     var body: some Scene {
         WindowGroup {

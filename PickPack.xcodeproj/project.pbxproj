@@ -10,22 +10,22 @@
 		33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */; };
 		33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD72C67662600DECDC3 /* KeychainHelper.swift */; };
 		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
+		FB1050BA2C6CE8420014097E /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = FB1050B92C6CE8420014097E /* Preview Content */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
 		FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA972F2C3821E500473B51 /* PickPackApp.swift */; };
 		FBBA97322C3821E500473B51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97312C3821E500473B51 /* ContentView.swift */; };
 		FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97332C3821E700473B51 /* Assets.xcassets */; };
-		FBBA97372C3821E700473B51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97362C3821E700473B51 /* Preview Assets.xcassets */; };
-		FBBA973E2C3825C100473B51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */; };
 		FBBA97552C43C0A500473B51 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97542C43C0A500473B51 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
-		33388CD52C6760DB00DECDC3 /* PickPack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
 		33388CD72C67662600DECDC3 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
+		FB1050B62C6CE7B70014097E /* PickPack.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
+		FB1050B92C6CE8420014097E /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -33,8 +33,6 @@
 		FBBA972F2C3821E500473B51 /* PickPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPackApp.swift; sourceTree = "<group>"; };
 		FBBA97312C3821E500473B51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBBA97332C3821E700473B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FBBA97362C3821E700473B51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBBA97542C43C0A500473B51 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,12 +47,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33388CD62C67661600DECDC3 /* Helper */ = {
+		33388CD62C67661600DECDC3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				33388CD72C67662600DECDC3 /* KeychainHelper.swift */,
 			);
-			path = Helper;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB1050B22C6CE60A0014097E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB1050B92C6CE8420014097E /* Preview Content */,
+				FBBA97332C3821E700473B51 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB1050B32C6CE6420014097E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB1050B62C6CE7B70014097E /* PickPack.entitlements */,
+				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB1050B42C6CE6610014097E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FB1050B52C6CE6700014097E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FBBA97232C3821E500473B51 = {
@@ -76,35 +106,26 @@
 		FBBA972E2C3821E500473B51 /* PickPack */ = {
 			isa = PBXGroup;
 			children = (
-				33388CD52C6760DB00DECDC3 /* PickPack.entitlements */,
-				FBBA97512C43B88300473B51 /* View */,
-				FBBA974E2C3C20B700473B51 /* Manager */,
-				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
-				33388CD62C67661600DECDC3 /* Helper */,
-				FBBA97332C3821E700473B51 /* Assets.xcassets */,
-				FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */,
-				FBBA97352C3821E700473B51 /* Preview Content */,
+				FB1050B32C6CE6420014097E /* App */,
+				FBBA974E2C3C20B700473B51 /* Managers */,
+				FB1050B52C6CE6700014097E /* Models */,
+				FB1050B42C6CE6610014097E /* Components */,
+				FB1050B22C6CE60A0014097E /* Resources */,
+				33388CD62C67661600DECDC3 /* Helpers */,
+				FBBA97512C43B88300473B51 /* Views */,
 			);
 			path = PickPack;
 			sourceTree = "<group>";
 		};
-		FBBA97352C3821E700473B51 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FBBA97362C3821E700473B51 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FBBA974E2C3C20B700473B51 /* Manager */ = {
+		FBBA974E2C3C20B700473B51 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				33388CD92C67747700DECDC3 /* AppleAuthManager.swift */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		FBBA97512C43B88300473B51 /* View */ = {
+		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
@@ -114,7 +135,7 @@
 				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
 				33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBA97372C3821E700473B51 /* Preview Assets.xcassets in Resources */,
+				FB1050BA2C6CE8420014097E /* Preview Content in Resources */,
 				FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */,
-				FBBA973E2C3825C100473B51 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,11 +351,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PickPack/PickPack.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PickPack/App/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Preview Content\"";
-				DEVELOPMENT_TEAM = 6FFZZTFJHB;
+				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -362,11 +382,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PickPack/PickPack.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PickPack/App/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Preview Content\"";
-				DEVELOPMENT_TEAM = 6FFZZTFJHB;
+				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

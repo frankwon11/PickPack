@@ -12,28 +12,31 @@ struct MainView: View {
     @State private var currentIndex = 0
     
     var body: some View {
-        VStack {
-            headerView
-            
-            navigationRow
+        ZStack {
+            Color(.black1).ignoresSafeArea()
+            VStack {
+                headerView
+                
+                navigationRow
 
-            Spacer().frame(height: 66)
-        
-            // TODO: 티켓 분기 처리.
-            // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
-            CarouselView()
-                .padding(.horizontal, -20)
+                Spacer().frame(height: 66)
             
-            Spacer()
-            
-            Button {
-                KeychainHelper.shared.deleteUserIdentifier()
-                authManager.authState = .signedOut
-            } label: {
-                Text("로그아웃")
-            }
-        } // VStack
-        .padding(.horizontal, 20)
+                // TODO: 티켓 분기 처리.
+                // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
+                CarouselView()
+                    .padding(.horizontal, -20)
+                
+                Spacer()
+                
+                Button {
+                    KeychainHelper.shared.deleteUserIdentifier()
+                    authManager.authState = .signedOut
+                } label: {
+                    Text("로그아웃")
+                }
+            } // VStack
+            .padding(.horizontal, 20)
+        }
 
     }
 }

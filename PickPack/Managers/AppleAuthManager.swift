@@ -53,3 +53,8 @@ final class AppleAuthManager: ObservableObject {
         print("Could not authenticate: \\(error.localizedDescription)")
     }
 }
+
+enum AuthState {
+    case signedIn
+    case signedOut
+}

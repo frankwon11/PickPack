@@ -43,6 +43,7 @@ struct TicketView: View {
                 .fill(.white)
                 .frame(height: 430)
                 .padding(.horizontal, 12)
+                
             
             // 티켓 내용
             VStack(spacing: 12) {
@@ -55,10 +56,12 @@ struct TicketView: View {
                         Text("\(place)")
                             .font(.body)
                             .fontWeight(.regular)
+                            .foregroundStyle(.black6)
                         
                         Text("\(title)")
                             .font(.title)
                             .fontWeight(.bold)
+                            .foregroundStyle(.black7)
                     }
                     Spacer()
                     
@@ -66,31 +69,32 @@ struct TicketView: View {
                     Text("JIMKKONG")
                         .font(.caption2)
                         .fontWeight(.regular)
+                        .foregroundStyle(.black3)
                         .rotationEffect(.degrees(90))
                         .fixedSize()
                         .frame(width: 13, height: 58)
                         .padding(.bottom, 20)
                 }
                 Divider()
-                    .foregroundColor(.black)
+                    .foregroundStyle(.black6)
                     .frame(height: 0.6)
                 
                 // MARK: - 여행 날짜
                 HStack(alignment: .center) {
                     VStack(alignment: .center, spacing: 2) {
                         Circle()
-                            .fill(.black)
+                            .fill(.black6)
                             .frame(width: 5, height: 5)
                         
                         // TODO: 색상 변경
                         ForEach(0..<3) { _ in
                             Rectangle()
-                                .fill(.black)
+                                .fill(.black3)
                                 .frame(width: 1, height: 4)
                         }
                         
                         Circle()
-                            .fill(.black)
+                            .fill(.black6)
                             .frame(width: 5, height: 5)
                     }
                     
@@ -99,10 +103,12 @@ struct TicketView: View {
                         Text("\(startDate)")
                             .font(.body)
                             .fontWeight(.regular)
+                            .foregroundStyle(.black6)
                         
                         Text("\(endDate)")
                             .font(.body)
                             .fontWeight(.regular)
+                            .foregroundStyle(.black6)
                     }
                     Spacer()
                     // TODO: 몇박 며칠 계산 Date Extension 추가
@@ -120,7 +126,7 @@ struct TicketView: View {
                 .frame(height: 44)
                 
                 Divider()
-                    .foregroundColor(.black)
+                    .foregroundColor(.black6)
                     .frame(height: 0.6)
                 
                 // MARK: - 여행 멤버
@@ -142,7 +148,7 @@ struct TicketView: View {
                     Text("\(members.count)명")
                         .font(.callout)
                         .fontWeight(.regular)
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .padding(.horizontal, 6)
                         .background(
                             Rectangle()
@@ -155,13 +161,13 @@ struct TicketView: View {
                 .frame(height: 44)
                 
                 Divider()
-                    .foregroundColor(.black)
+                    .foregroundColor(.black6)
                     .frame(height: 0.6)
                 
                 // MARK: - 초대 코드 및 짐 퍼센티지
                 HStack {
                     Text("\(invitationCode)")
-                        .font(.title)
+                        .font(.title3)
                         .fontWeight(.regular)
                         .rotationEffect(.degrees(90))
                         .fixedSize()
@@ -172,10 +178,12 @@ struct TicketView: View {
                         Text("짐 싸기")
                             .font(.footnote)
                             .fontWeight(.regular)
+                            .foregroundStyle(.black7)
                         
                         Text("\(progress)%")
                             .font(.largeTitle)
                             .fontWeight(.bold)
+                            .foregroundStyle(.black7)
                     }
                     .padding(.top, 42)
                 }
@@ -183,7 +191,7 @@ struct TicketView: View {
                 ZStack(alignment: .leading) {
                     // TODO: 색상 변경
                     Rectangle()
-                        .fill(.gray.opacity(0.3))
+                        .fill(.black2)
                         .frame(height: 60)
                     Rectangle()
                         .fill(travelColor)

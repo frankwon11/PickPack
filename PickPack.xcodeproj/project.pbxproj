@@ -18,10 +18,7 @@
 		FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97332C3821E700473B51 /* Assets.xcassets */; };
 		FBBA97372C3821E700473B51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97362C3821E700473B51 /* Preview Assets.xcassets */; };
 		FBBA973E2C3825C100473B51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */; };
-		FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA974F2C3C20E200473B51 /* AuthManager.swift */; };
-		FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97522C43B89000473B51 /* SignUpView.swift */; };
 		FBBA97552C43C0A500473B51 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97542C43C0A500473B51 /* MainView.swift */; };
-		FBBA97572C43C18100473B51 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97562C43C18100473B51 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +35,7 @@
 		FBBA97332C3821E700473B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBA97362C3821E700473B51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBBA973D2C3825C100473B51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FBBA974F2C3C20E200473B51 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		FBBA97522C43B89000473B51 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FBBA97542C43C0A500473B51 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		FBBA97562C43C18100473B51 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +99,6 @@
 		FBBA974E2C3C20B700473B51 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				FBBA974F2C3C20E200473B51 /* AuthManager.swift */,
 				33388CD92C67747700DECDC3 /* AppleAuthManager.swift */,
 			);
 			path = Manager;
@@ -116,8 +109,6 @@
 			children = (
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
-				FBBA97522C43B89000473B51 /* SignUpView.swift */,
-				FBBA97562C43C18100473B51 /* SignInView.swift */,
 				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
 				FB16D4662C52AC7D00FD2F7E /* TicketView.swift */,
 				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
@@ -202,13 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
-				FBBA97572C43C18100473B51 /* SignInView.swift in Sources */,
 				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
-				FBBA97532C43B89000473B51 /* SignUpView.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
-				FBBA97502C3C20E200473B51 /* AuthManager.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,

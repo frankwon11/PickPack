@@ -43,7 +43,6 @@ struct TicketView: View {
                 .fill(.white)
                 .frame(height: 430)
                 .padding(.horizontal, 12)
-                
             
             // 티켓 내용
             VStack(spacing: 12) {
@@ -167,8 +166,9 @@ struct TicketView: View {
                 // MARK: - 초대 코드 및 짐 퍼센티지
                 HStack {
                     Text("\(invitationCode)")
-                        .font(.title3)
+                        .font(.title)
                         .fontWeight(.regular)
+                        .foregroundStyle(.black3)
                         .rotationEffect(.degrees(90))
                         .fixedSize()
                         .frame(width: 34, height: 101)
@@ -204,8 +204,8 @@ struct TicketView: View {
                             var result: [(CGFloat, CGFloat)] = []
                             var currentWidth: CGFloat = 0
                             while currentWidth < ticketWidth - 40 {
-                                let barWidth = CGFloat(Int.random(in: 1...3))
-                                let barSpacing = CGFloat(Int.random(in: 1...2))
+                                let barWidth = CGFloat(Int.random(in: 2...4))
+                                let barSpacing = CGFloat(Int.random(in: 0...2))
                                 if currentWidth + barWidth + barSpacing > ticketWidth - 40 {
                                     break
                                 }

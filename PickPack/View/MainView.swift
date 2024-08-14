@@ -29,14 +29,6 @@ struct MainView: View {
             Button {
                 KeychainHelper.shared.deleteUserIdentifier()
                 authManager.authState = .signedOut
-//                Task {
-//                       do {
-//                           try await authManager.authSignOut()
-//                       }
-//                       catch {
-//                           print("Error: \(error)")
-//                       }
-//                   }
             } label: {
                 Text("로그아웃")
             }

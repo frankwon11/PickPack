@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item: Codable {
+struct Item: Identifiable, Codable {
     let id: String
     
     let name: String
@@ -23,7 +23,7 @@ struct Item: Codable {
     var quantity: Int = 1
 }
 
-enum ItemTheme: String, Codable {
+enum ItemTheme: String, Codable, CaseIterable {
     case essentials = "필수품"
     case documents = "서류"
     case toiletries = "세면용품"

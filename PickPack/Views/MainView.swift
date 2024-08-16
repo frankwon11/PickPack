@@ -12,33 +12,30 @@ struct MainView: View {
     @State private var currentIndex = 0
     
     var body: some View {
-        ZStack {
-            Color(.black1).ignoresSafeArea()
-            VStack {
-                headerView
-                
-                navigationRow
-
-                Spacer().frame(height: 66)
+        VStack {
+            headerView
             
-                // TODO: 티켓 분기 처리.
-                // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
-                CarouselView()
-                    .padding(.horizontal, -20)
-                
-                Spacer()
-                
-                Button {
-                    KeychainHelper.shared.deleteUserIdentifier()
-                    authManager.authState = .signedOut
-                } label: {
-                    Text("로그아웃")
-                }
-            } // VStack
-            .padding(.horizontal, 20)
-        }
-
+            navigationRow
+            
+            Spacer().frame(height: 66)
+            
+            // TODO: 티켓 분기 처리.
+            // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
+            CarouselView()
+                .padding(.horizontal, -20)
+            
+            Spacer()
+            
+            Button {
+                KeychainHelper.shared.deleteUserIdentifier()
+                authManager.authState = .signedOut
+            } label: {
+                Text("로그아웃")
+            }
+        } // VStack
+        .padding(.horizontal, 20)
     }
+    
 }
 
 extension MainView {
@@ -58,10 +55,7 @@ extension MainView {
                     Circle()
                 )
             
-//            Text(authManager.user?.displayName ?? "no user")
-//                .font(.headline)
-//                .fontWeight(.medium)
-//                .foregroundColor(.black)
+            // TODO: 이름 불러오기
             
             Spacer()
             
@@ -134,7 +128,6 @@ extension MainView {
                 }
                 Spacer()
             }
-                
         }
         .frame(height: 50)
     }

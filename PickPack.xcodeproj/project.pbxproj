@@ -136,6 +136,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7278F0882C6E5DED000A1D8E /* RoomView */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
 				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
@@ -233,6 +234,7 @@
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
+				7278F08C2C6FBD20000A1D8E /* RoomViewTabs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

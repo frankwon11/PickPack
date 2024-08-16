@@ -13,6 +13,14 @@ struct Item: Codable {
     let name: String
     
     let theme: ItemTheme
+    
+    var isShared: Bool = false
+      
+    var isHidden: Bool = false
+    
+    var isPacked: Bool = false
+    
+    var quantity: Int = 1
 }
 
 enum ItemTheme: String, Codable {

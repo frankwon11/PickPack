@@ -12,6 +12,7 @@
 		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
 		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
 		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
+		729F67F12C709C7700F470CB /* MyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F67F02C709C7700F470CB /* MyItemView.swift */; };
 		FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BB2C6F33F90014097E /* AddItemSheet.swift */; };
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
@@ -30,6 +31,7 @@
 		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
 		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
+		729F67F02C709C7700F470CB /* MyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemView.swift; sourceTree = "<group>"; };
 		FB1050B62C6CE7B70014097E /* PickPack.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
 		FB1050BB2C6F33F90014097E /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
+				729F67F02C709C7700F470CB /* MyItemView.swift */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
+				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,

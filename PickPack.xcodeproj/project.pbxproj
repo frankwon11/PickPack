@@ -15,6 +15,7 @@
 		33388DA52C6FA5FC00DECDC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33388DA42C6FA5FC00DECDC3 /* Assets.xcassets */; };
 		33388DAC2C6FB87900DECDC3 /* FriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */; };
 		33388DAE2C6FB8D400DECDC3 /* FriendItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */; };
+		33388DB22C6FC5AB00DECDC3 /* FriendItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */; };
 		FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BB2C6F33F90014097E /* AddItemSheet.swift */; };
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
@@ -35,6 +36,7 @@
 		33388DA42C6FA5FC00DECDC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemView.swift; sourceTree = "<group>"; };
 		33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemListView.swift; sourceTree = "<group>"; };
+		33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemRowView.swift; sourceTree = "<group>"; };
 		FB1050B62C6CE7B70014097E /* PickPack.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
 		FB1050BB2C6F33F90014097E /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				FB1050BB2C6F33F90014097E /* AddItemSheet.swift */,
 				33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */,
 				33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */,
+				33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
+				33388DB22C6FC5AB00DECDC3 /* FriendItemRowView.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,

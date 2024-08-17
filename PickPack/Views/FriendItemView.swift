@@ -16,12 +16,12 @@ struct FriendItemView: View {
         NavigationStack{
             VStack(spacing: 10) {
                 // 배열이 비었을 때
-                // EmptyFriendListView
+                // emptyFriendListView
                 
                 // 사람이 있다면
-                FriendRow
+                friendRow
                 
-                FriendRow
+                friendRow
                 
                 Spacer()
             }
@@ -34,7 +34,7 @@ extension FriendItemView {
     
     // MARK: - 친구 리스트가 비어있을 때, 화면
     @ViewBuilder
-    private var EmptyFriendListView: some View {
+    private var emptyFriendListView: some View {
         VStack {
             Text("친구를 초대하세요!")
                 .foregroundStyle(.black5)
@@ -71,13 +71,13 @@ extension FriendItemView {
     }
     
     // MARK: - 친구가 있을 때, 화면
-    private var FriendListView: some View {
+    private var friendListView: some View {
         VStack {
             
         }
     }
     
-    private var FriendRow: some View {
+    private var friendRow: some View {
             HStack(spacing: 0){
                 
                 Image(systemName: "person.circle")

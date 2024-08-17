@@ -133,6 +133,6 @@ extension MainView {
     }
 }
 
-//#Preview {
-//    MainView()
-//}
+#Preview {
+    MainView()
+}

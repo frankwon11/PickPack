@@ -12,17 +12,27 @@ struct MyItemView: View {
     private let roomColor: Color = .indigo
     
     @State private var showAddItemSheet: Bool = false
+    // MARK: member가 가지고 있는 item 배열
+    @State private var myItem: [Item] = []
 
     var body: some View {
-        VStack(spacing: 0) {
-            addItemButton
-            
-            Spacer()
+        ScrollView {
+            VStack(spacing: 0) {
+                addItemButton
+                
+                if myItem.isEmpty {
+                    emptyItemView
+                } else {
+                    
+                }
+                
+                Spacer()
+            }
         }
+        .background(.black1)
         .sheet(isPresented: $showAddItemSheet) {
             AddItemSheet(isSheetDisplaying: $showAddItemSheet, ticketColor: roomColor)
         }
-        .background(.black1)
     }
 }
 
@@ -33,7 +43,7 @@ extension MyItemView {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(myItem.isEmpty ? .white : .black1)
                 
                 Label("새로운 짐 추가하기", systemImage: "plus")
                     .font(.subheadline)
@@ -43,7 +53,15 @@ extension MyItemView {
         }
         .frame(height: 48)
         .padding(.horizontal, 20)
-        .padding(.top, 12)
+        .padding(.vertical, 12)
+    }
+    
+    private var emptyItemView: some View {
+        Text("새로운 짐을 추가하여\n짐 싸기를 시작해보세요!")
+            .multilineTextAlignment(.center)
+            .font(.title3)
+            .foregroundStyle(.black5)
+            .padding(.top, 180)
     }
 }
 

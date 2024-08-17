@@ -11,22 +11,28 @@ struct FriendItemView: View {
     
     // 친구 배열 @Binding or request
     let invitationCode: String = "00342F"
+    // 나중에 받아올 것으로 예상되는 정보들,,
+    @State private var user1ItemList: ItemList = ItemList()
+    @State private var user2ItemList: ItemList = ItemList()
+    @State private var user1Name: String = "슌"
+    @State private var user2Name: String = "세이디"
     
     var body: some View {
         NavigationStack{
-            VStack(spacing: 10) {
-                // 배열이 비었을 때
-                // emptyFriendListView
-                
-                // 사람이 있다면
-                friendRow
-                
-                friendRow
-                
-                Spacer()
+            ScrollView{
+                VStack(spacing: 10) {
+                    // 배열이 비었을 때
+                    // emptyFriendListView
+                    
+                    // 사람이 있다면 FriendListVie 대신 더미 2개
+                    friendListView
+                    
+                    Spacer()
+                }
+                .padding(.top, 16)
+                .padding(.horizontal, 20)
+                .background(.black1)
             }
-            .padding(.horizontal, 20)
-            .background(.black1)
         }
     }
 }
@@ -65,6 +71,7 @@ extension FriendItemView {
                 
             })
         }
+        
     }
     
     private func copyTextToClipboard(text: String) {
@@ -73,43 +80,12 @@ extension FriendItemView {
     
     // MARK: - 친구가 있을 때, 화면
     private var friendListView: some View {
-        VStack {
-            
+        VStack { // 나중에 ForEach
+            FriendRow(itemList: $user1ItemList, name: user1Name)
+            FriendRow(itemList: $user2ItemList, name: user2Name)
         }
     }
-    
-    private var friendRow: some View {
-            HStack(spacing: 0){
-                
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 40)
-                    .padding(.trailing, 16)
-                
-                Text("슌")
-                    .font(.body)
-                
-                Spacer()
-                
-                NavigationLink {
-                    FriendItemListView()
-                } label: {
-                    HStack{
-                        Text("짐리스트 보러가기")
-                            .font(.subheadline)
-                        Image(systemName: "chevron.right")
-                        
-                    }
-                    .foregroundStyle(.black6)
-                }
-            }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 16)
-            .background(.white) // 확인용, 나중에 white로
-            .cornerRadius(20)
-        }
-    
+
 }
 
 #Preview {

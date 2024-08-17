@@ -10,12 +10,15 @@
 		33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */; };
 		33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD72C67662600DECDC3 /* KeychainHelper.swift */; };
 		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
-		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
-		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
-		33388DA52C6FA5FC00DECDC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33388DA42C6FA5FC00DECDC3 /* Assets.xcassets */; };
 		33388DAC2C6FB87900DECDC3 /* FriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */; };
 		33388DAE2C6FB8D400DECDC3 /* FriendItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */; };
 		33388DB22C6FC5AB00DECDC3 /* FriendItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */; };
+		33388DCE2C70B74200DECDC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33388DCD2C70B74200DECDC3 /* Assets.xcassets */; };
+		33388DD12C70BF5E00DECDC3 /* FriendSharedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DD02C70BF5E00DECDC3 /* FriendSharedList.swift */; };
+		33388DD32C70C6B700DECDC3 /* FriendItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DD22C70C6B700DECDC3 /* FriendItemList.swift */; };
+		33388DD52C70DA2F00DECDC3 /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388DD42C70DA2F00DECDC3 /* FriendRow.swift */; };
+		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
+		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
 		FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BB2C6F33F90014097E /* AddItemSheet.swift */; };
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
@@ -31,12 +34,15 @@
 		33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
 		33388CD72C67662600DECDC3 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
-		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
-		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
-		33388DA42C6FA5FC00DECDC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemView.swift; sourceTree = "<group>"; };
 		33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemListView.swift; sourceTree = "<group>"; };
 		33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemRowView.swift; sourceTree = "<group>"; };
+		33388DCD2C70B74200DECDC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33388DD02C70BF5E00DECDC3 /* FriendSharedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSharedList.swift; sourceTree = "<group>"; };
+		33388DD22C70C6B700DECDC3 /* FriendItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemList.swift; sourceTree = "<group>"; };
+		33388DD42C70DA2F00DECDC3 /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
+		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
 		FB1050B62C6CE7B70014097E /* PickPack.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
 		FB1050BB2C6F33F90014097E /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -69,21 +75,36 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		33388DCC2C70B74200DECDC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33388DCD2C70B74200DECDC3 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = PickPack/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		33388DCF2C70B78D00DECDC3 /* FreindItem */ = {
+			isa = PBXGroup;
+			children = (
+				33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */,
+				33388DD42C70DA2F00DECDC3 /* FriendRow.swift */,
+				33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */,
+				33388DD02C70BF5E00DECDC3 /* FriendSharedList.swift */,
+				33388DD22C70C6B700DECDC3 /* FriendItemList.swift */,
+				33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */,
+			);
+			path = FreindItem;
+			sourceTree = "<group>";
+		};
 		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				33388DCF2C70B78D00DECDC3 /* FreindItem */,
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
 			);
 			path = Room;
-			sourceTree = "<group>";
-		};
-		FB1050B22C6CE60A0014097E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FBBA97332C3821E700473B51 /* Assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		FB1050B32C6CE6420014097E /* App */ = {
@@ -123,8 +144,8 @@
 		FBBA972E2C3821E500473B51 /* PickPack */ = {
 			isa = PBXGroup;
 			children = (
-				33388DA42C6FA5FC00DECDC3 /* Assets.xcassets */,
 				FB1050B32C6CE6420014097E /* App */,
+				33388DCC2C70B74200DECDC3 /* Resources */,
 				FBBA974E2C3C20B700473B51 /* Managers */,
 				FB1050B52C6CE6700014097E /* Models */,
 				33388CD62C67661600DECDC3 /* Helpers */,
@@ -152,9 +173,6 @@
 				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
 				33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */,
 				FB1050BB2C6F33F90014097E /* AddItemSheet.swift */,
-				33388DAB2C6FB87900DECDC3 /* FriendItemView.swift */,
-				33388DAD2C6FB8D400DECDC3 /* FriendItemListView.swift */,
-				33388DB12C6FC5AB00DECDC3 /* FriendItemRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,7 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */,
+				33388DCE2C70B74200DECDC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +252,7 @@
 			files = (
 				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
 				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
+				33388DD52C70DA2F00DECDC3 /* FriendRow.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
@@ -244,9 +263,11 @@
 				33388DAC2C6FB87900DECDC3 /* FriendItemView.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
+				33388DD12C70BF5E00DECDC3 /* FriendSharedList.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
+				33388DD32C70C6B700DECDC3 /* FriendItemList.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 				33388DAE2C6FB8D400DECDC3 /* FriendItemListView.swift in Sources */,
 			);
@@ -383,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Assets.xcassets\"";
-				DEVELOPMENT_TEAM = 2UWGKS2UN5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -414,7 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Assets.xcassets\"";
-				DEVELOPMENT_TEAM = 2UWGKS2UN5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

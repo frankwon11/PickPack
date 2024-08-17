@@ -63,13 +63,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		721F5FE02C6FD2AE003606A4 /* RoomView */ = {
+		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
 			);
-			path = RoomView;
+			path = Room;
 			sourceTree = "<group>";
 		};
 		FB1050B22C6CE60A0014097E /* Resources */ = {
@@ -146,7 +146,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				721F5FE02C6FD2AE003606A4 /* RoomView */,
+				721F5FE02C6FD2AE003606A4 /* Room */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
 				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,

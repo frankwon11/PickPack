@@ -15,7 +15,7 @@ struct Item: Identifiable, Codable {
     let theme: ItemTheme
     
     var isShared: Bool = false
-      
+    
     var isHidden: Bool = false
     
     var isPacked: Bool = false
@@ -34,4 +34,14 @@ enum ItemTheme: String, Codable, CaseIterable {
     case swimGear = "수영용품"
     case golfGear = "골프용품"
     case others = "기타"
+    
+    // MyItemView에서 제일 처음 그려지는 테마에서는 선을 그려주지 않기 위해 작성되었습니다
+    static func firstMatchingTheme(items: [Item]) -> ItemTheme? {
+        for theme in ItemTheme.allCases {
+            if !items.filter({ $0.theme == theme }).isEmpty {
+                return theme
+            }
+        }
+        return nil
+    }
 }

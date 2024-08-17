@@ -178,6 +178,7 @@ struct MyItemRow: View {
             
             Text(item.name)
                 .font(.callout)
+                .strikethrough(item.isPacked, color: .black)
             
             Spacer()
             

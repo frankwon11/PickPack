@@ -10,7 +10,8 @@
 		33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */; };
 		33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD72C67662600DECDC3 /* KeychainHelper.swift */; };
 		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
-		FB1050BA2C6CE8420014097E /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = FB1050B92C6CE8420014097E /* Preview Content */; };
+		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
+		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
 		FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BB2C6F33F90014097E /* AddItemSheet.swift */; };
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
@@ -27,8 +28,9 @@
 		33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
 		33388CD72C67662600DECDC3 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
+		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
 		FB1050B62C6CE7B70014097E /* PickPack.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PickPack.entitlements; sourceTree = "<group>"; };
-		FB1050B92C6CE8420014097E /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		FB1050BB2C6F33F90014097E /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB1050C12C6F37EE0014097E /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
@@ -61,10 +63,18 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		721F5FE02C6FD2AE003606A4 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
+				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
 		FB1050B22C6CE60A0014097E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FB1050B92C6CE8420014097E /* Preview Content */,
 				FBBA97332C3821E700473B51 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -136,6 +146,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				721F5FE02C6FD2AE003606A4 /* Room */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
 				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
@@ -209,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB1050BA2C6CE8420014097E /* Preview Content in Resources */,
 				FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +240,9 @@
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
+				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
+				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 			);
@@ -366,7 +378,7 @@
 				CODE_SIGN_ENTITLEMENTS = PickPack/App/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -397,7 +409,7 @@
 				CODE_SIGN_ENTITLEMENTS = PickPack/App/PickPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PickPack/Resources/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

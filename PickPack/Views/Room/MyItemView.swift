@@ -14,13 +14,13 @@ struct MyItemView: View {
     @State private var showAddItemSheet: Bool = false
     // MARK: member가 가지고 있는 item 배열
     @State private var myItem: [Item] = [
-        .init(id: UUID().uuidString, name: "test0", theme: .clothing),
+        .init(id: UUID().uuidString, name: "test0", theme: .clothing, isShared: true),
         .init(id: UUID().uuidString, name: "test1", theme: .clothing),
         .init(id: UUID().uuidString, name: "test2", theme: .clothing),
-        .init(id: UUID().uuidString, name: "test3", theme: .documents),
+        .init(id: UUID().uuidString, name: "test3", theme: .documents, isShared: true),
         .init(id: UUID().uuidString, name: "test4", theme: .documents),
         .init(id: UUID().uuidString, name: "test5", theme: .cosmetics),
-        .init(id: UUID().uuidString, name: "test6", theme: .medication),
+        .init(id: UUID().uuidString, name: "test6", theme: .medication, isShared: true),
         .init(id: UUID().uuidString, name: "test7", theme: .medication),
         .init(id: UUID().uuidString, name: "test8", theme: .others),
         .init(id: UUID().uuidString, name: "test9", theme: .clothing),
@@ -29,6 +29,10 @@ struct MyItemView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
+                if !myItem.filter({ $0.isShared }).isEmpty {
+                    mySharedItemView
+                }
+                
                 addItemButton
                 
                 if myItem.isEmpty {
@@ -48,6 +52,17 @@ struct MyItemView: View {
 }
 
 extension MyItemView {
+    private var mySharedItemView: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundStyle(.white)
+            
+            MySharedItemThemeRow(roomColor: roomColor, items: myItem.filter({ $0.isShared }))
+        }
+        .padding([.horizontal, .bottom], 20)
+        .padding(.top, 16)
+    }
+    
     private var addItemButton: some View {
         Button {
             showAddItemSheet = true
@@ -95,6 +110,63 @@ extension MyItemView {
     }
 }
 
+struct MySharedItemThemeRow: View {
+    let roomColor: Color
+    var items: [Item]
+    @State private var isExpanded: Bool = true
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack(alignment: .center, spacing: 0) {
+                Text("내가 챙길 공유짐")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(roomColor)
+                    .padding(.leading, 20)
+                
+                Spacer()
+                
+                // 선택한 아이템 개수 표시
+                Text("\(selectedItemCount())/\(items.count)")
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                    .foregroundStyle(.black5)
+                
+                // 토글 버튼
+                Button {
+                    withAnimation {
+                        isExpanded.toggle()
+                    }
+                } label: {
+                    Image(systemName: isExpanded ? "triangle.fill" : "triangle.fill")
+                        .font(.subheadline)
+                        .fontWeight(.regular)
+                        .foregroundStyle(.black5)
+                        .padding(16)
+                        .rotationEffect(isExpanded ? .zero : .degrees(180))
+                }
+            }
+            
+            if isExpanded {
+                Divider()
+                    .background(roomColor)
+                ForEach(items) { item in
+                    MyItemRow(roomColor: roomColor, item: item)
+                    
+                    if items.last?.id != item.id {
+                        Divider()
+                            .background(.black4)
+                    }
+                }
+            }
+        }
+    }
+    
+    func selectedItemCount() -> Int {
+        items.filter { $0.isPacked }.count
+    }
+}
+
 struct MyItemThemeRow: View {
     let roomColor: Color
     var theme: ItemTheme
@@ -125,11 +197,11 @@ struct MyItemThemeRow: View {
                     .foregroundStyle(.black5)
                 
                 // 토글 버튼
-                Button(action: {
+                Button {
                     withAnimation {
                         isExpanded.toggle()
                     }
-                }) {
+                } label: {
                     Image(systemName: isExpanded ? "triangle.fill" : "triangle.fill")
                         .font(.subheadline)
                         .fontWeight(.regular)
@@ -203,7 +275,7 @@ struct MyItemRow: View {
                 Button {
                     item.isShared.toggle()
                 } label: {
-                    Text("share")
+                    Text("shared")
                 }
             } label: {
                 Image(systemName: "ellipsis")

@@ -12,17 +12,14 @@ struct FriendItemRowView: View {
     
     var body: some View {
         HStack {
-            Button(action: {
-                item.isPacked.toggle()
-            }) {
-                HStack {
-                    Image(systemName: item.isPacked ? "checkmark.square.fill" : "square")
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(item.isPacked ? .blue : .gray)
-                }
+            
+            HStack {
+                Image(systemName: item.isPacked ? "checkmark.square.fill" : "square")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(item.isPacked ? .blue : .gray)
             }
-            .buttonStyle(PlainButtonStyle())
+
             
             Text(item.name)
                 .strikethrough(item.isPacked, color: .black)

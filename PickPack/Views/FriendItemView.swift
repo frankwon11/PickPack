@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FriendItemView: View {
     
-    // 친구 배열
+    // 친구 배열 @Binding or request
     let invitationCode: String = "00342F"
     
     var body: some View {
@@ -26,6 +26,7 @@ struct FriendItemView: View {
                 Spacer()
             }
             .padding(.horizontal, 20)
+            .background(.black1)
         }
     }
 }
@@ -105,7 +106,7 @@ extension FriendItemView {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
-            .background(.black1) // 확인용, 나중에 white로
+            .background(.white) // 확인용, 나중에 white로
             .cornerRadius(20)
         }
     

@@ -76,6 +76,7 @@ extension RoomView {
                 
                 HStack(spacing: 0) {
                     ForEach(RoomViewTabs.allCases, id: \.self) { tab in
+                        // MARK: 버튼이라 blink 애니메이션이 있는데 탭 전환에는 어울리지 않는 것 같음. onTapGesture로 바꿔야할까요?
                         Button {
                             currentTab = tab
                             withAnimation {

@@ -13,7 +13,18 @@ struct MyItemView: View {
     
     @State private var showAddItemSheet: Bool = false
     // MARK: member가 가지고 있는 item 배열
-    @State private var myItem: [Item] = []
+    @State private var myItem: [Item] = [
+        .init(id: UUID().uuidString, name: "test0", theme: .clothing),
+        .init(id: UUID().uuidString, name: "test1", theme: .clothing),
+        .init(id: UUID().uuidString, name: "test2", theme: .clothing),
+        .init(id: UUID().uuidString, name: "test3", theme: .documents),
+        .init(id: UUID().uuidString, name: "test4", theme: .documents),
+        .init(id: UUID().uuidString, name: "test5", theme: .cosmetics),
+        .init(id: UUID().uuidString, name: "test6", theme: .medication),
+        .init(id: UUID().uuidString, name: "test7", theme: .medication),
+        .init(id: UUID().uuidString, name: "test8", theme: .others),
+        .init(id: UUID().uuidString, name: "test9", theme: .clothing),
+    ]
 
     var body: some View {
         ScrollView {

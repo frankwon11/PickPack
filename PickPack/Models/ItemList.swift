@@ -50,7 +50,7 @@ struct ItemList: Codable {
             Item(id: UUID().uuidString, name: "신발", theme: .clothing),
             Item(id: UUID().uuidString, name: "잠옷", theme: .clothing),
             Item(id: UUID().uuidString, name: "모자", theme: .clothing),
-            Item(id: UUID().uuidString, name: "보조가방", theme: .clothing),
+            Item(id: UUID().uuidString, name: "보조 가방", theme: .clothing),
             
             // 화장품
             Item(id: UUID().uuidString, name: "스킨", theme: .cosmetics),

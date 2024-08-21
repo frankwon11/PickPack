@@ -14,30 +14,31 @@ struct RoomSettingView: View {
     @State private var text = ""
     
     private let characterLimit = 7
-    
     var body: some View {
         ZStack {
             Color.black1
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(alignment: .leading) {
-                Divider()
-                    .foregroundColor(.black3)
-                
-                SettingRoomNameField()
-                    .padding(.vertical,15)
-                
-                SettingDestinationView()
-                    .padding(.vertical,15)
-                
-                SettingDurationField()
-                    .padding(.vertical,15)
-                
-                SettingRoomColorField()
-                    .padding(.vertical,15)
-                
-                Spacer()
-                
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Divider()
+                        .foregroundColor(.black3)
+                    
+                    SettingRoomNameField()
+                        .padding(.vertical,15)
+                    
+                    SettingDestinationView()
+                        .padding(.vertical,15)
+                    
+                    SettingDurationField()
+                        .padding(.vertical,15)
+                    
+                    SettingRoomColorField()
+                        .padding(.vertical,15)
+                    
+                    Spacer()
+                    
+                }
             }
             
             

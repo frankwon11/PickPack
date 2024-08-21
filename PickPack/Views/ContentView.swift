@@ -27,7 +27,7 @@ struct ContentView: View {
             // 테스트를 위해서 MainView 수정
             // 로그인 분기 처리
             VStack {
-                MainView()
+                Text("세이디 파이팅")
             }
         }
         

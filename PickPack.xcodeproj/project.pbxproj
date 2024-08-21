@@ -21,6 +21,16 @@
 		465782842C75D0F100149EC1 /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782832C75D0F100149EC1 /* DurationField.swift */; };
 		465782862C75D11600149EC1 /* RoomColorField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782852C75D11600149EC1 /* RoomColorField.swift */; };
 		465782882C75D12B00149EC1 /* RoomNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782872C75D12B00149EC1 /* RoomNameField.swift */; };
+		4657828F2C7600E000149EC1 /* SharedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657828E2C7600E000149EC1 /* SharedItemView.swift */; };
+		465782912C76113000149EC1 /* SharedItemNotYetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782902C76113000149EC1 /* SharedItemNotYetListView.swift */; };
+		465782932C76114C00149EC1 /* SharedItemDoneListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782922C76114C00149EC1 /* SharedItemDoneListView.swift */; };
+		465782962C76171D00149EC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782952C76171D00149EC1 /* SettingView.swift */; };
+		465782982C76182700149EC1 /* RoomSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782972C76182700149EC1 /* RoomSettingView.swift */; };
+		4657829A2C76186000149EC1 /* SettingRoomNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782992C76186000149EC1 /* SettingRoomNameField.swift */; };
+		4657829C2C76194400149EC1 /* SettingDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657829B2C76194400149EC1 /* SettingDestinationView.swift */; };
+		465782A02C76199300149EC1 /* SettingDurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657829F2C76199300149EC1 /* SettingDurationField.swift */; };
+		465782A22C7619B600149EC1 /* SettingRoomColorField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782A12C7619B600149EC1 /* SettingRoomColorField.swift */; };
+		465782A42C762F6300149EC1 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782A32C762F6300149EC1 /* FAQView.swift */; };
 		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
 		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
 		7243C14D2C75E8700087125E /* MyItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7243C14C2C75E8700087125E /* MyItemListView.swift */; };
@@ -53,6 +63,16 @@
 		465782832C75D0F100149EC1 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
 		465782852C75D11600149EC1 /* RoomColorField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomColorField.swift; sourceTree = "<group>"; };
 		465782872C75D12B00149EC1 /* RoomNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNameField.swift; sourceTree = "<group>"; };
+		4657828E2C7600E000149EC1 /* SharedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemView.swift; sourceTree = "<group>"; };
+		465782902C76113000149EC1 /* SharedItemNotYetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemNotYetListView.swift; sourceTree = "<group>"; };
+		465782922C76114C00149EC1 /* SharedItemDoneListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemDoneListView.swift; sourceTree = "<group>"; };
+		465782952C76171D00149EC1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		465782972C76182700149EC1 /* RoomSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSettingView.swift; sourceTree = "<group>"; };
+		465782992C76186000149EC1 /* SettingRoomNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRoomNameField.swift; sourceTree = "<group>"; };
+		4657829B2C76194400149EC1 /* SettingDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDestinationView.swift; sourceTree = "<group>"; };
+		4657829F2C76199300149EC1 /* SettingDurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDurationField.swift; sourceTree = "<group>"; };
+		465782A12C7619B600149EC1 /* SettingRoomColorField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRoomColorField.swift; sourceTree = "<group>"; };
+		465782A32C762F6300149EC1 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
 		7243C14C2C75E8700087125E /* MyItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemListView.swift; sourceTree = "<group>"; };
@@ -111,11 +131,36 @@
 			path = CreateRoom;
 			sourceTree = "<group>";
 		};
+		4657828D2C7600D400149EC1 /* SharedItem */ = {
+			isa = PBXGroup;
+			children = (
+				4657828E2C7600E000149EC1 /* SharedItemView.swift */,
+				465782902C76113000149EC1 /* SharedItemNotYetListView.swift */,
+				465782922C76114C00149EC1 /* SharedItemDoneListView.swift */,
+			);
+			path = SharedItem;
+			sourceTree = "<group>";
+		};
+		465782942C76171300149EC1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				465782952C76171D00149EC1 /* SettingView.swift */,
+				465782972C76182700149EC1 /* RoomSettingView.swift */,
+				465782992C76186000149EC1 /* SettingRoomNameField.swift */,
+				4657829B2C76194400149EC1 /* SettingDestinationView.swift */,
+				4657829F2C76199300149EC1 /* SettingDurationField.swift */,
+				465782A12C7619B600149EC1 /* SettingRoomColorField.swift */,
+				465782A32C762F6300149EC1 /* FAQView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
+				4657828D2C7600D400149EC1 /* SharedItem */,
 				7243C1492C75E8120087125E /* MyItem */,
 			);
 			path = Room;
@@ -203,6 +248,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				465782942C76171300149EC1 /* Setting */,
 				4657827C2C75D06B00149EC1 /* CreateRoom */,
 				721F5FE02C6FD2AE003606A4 /* Room */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
@@ -290,13 +336,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				465782882C75D12B00149EC1 /* RoomNameField.swift in Sources */,
+				4657829C2C76194400149EC1 /* SettingDestinationView.swift in Sources */,
 				33A068E42C75C65700EF0F09 /* SharedItem.swift in Sources */,
 				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
 				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
+				465782962C76171D00149EC1 /* SettingView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
+				4657829A2C76186000149EC1 /* SettingRoomNameField.swift in Sources */,
+				465782982C76182700149EC1 /* RoomSettingView.swift in Sources */,
 				33A068E22C75C35D00EF0F09 /* User.swift in Sources */,
 				33A068E02C75C2B900EF0F09 /* Member.swift in Sources */,
+				465782932C76114C00149EC1 /* SharedItemDoneListView.swift in Sources */,
+				465782A02C76199300149EC1 /* SettingDurationField.swift in Sources */,
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				7243C1532C75F4C70087125E /* MySharedItemListView.swift in Sources */,
@@ -305,11 +357,14 @@
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
+				4657828F2C7600E000149EC1 /* SharedItemView.swift in Sources */,
+				465782912C76113000149EC1 /* SharedItemNotYetListView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
 				33A068E82C75C9E900EF0F09 /* CustomColor.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
 				465782822C75D0C400149EC1 /* DestinationView.swift in Sources */,
 				33A068E62C75C96300EF0F09 /* Room.swift in Sources */,
+				465782A42C762F6300149EC1 /* FAQView.swift in Sources */,
 				7243C14D2C75E8700087125E /* MyItemListView.swift in Sources */,
 				465782862C75D11600149EC1 /* RoomColorField.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
@@ -317,6 +372,7 @@
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 				7243C1512C75E9CF0087125E /* MyItemRow.swift in Sources */,
 				4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */,
+				465782A22C7619B600149EC1 /* SettingRoomColorField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

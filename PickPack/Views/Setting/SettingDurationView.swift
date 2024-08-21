@@ -1,5 +1,5 @@
 //
-//  DurationField.swift
+//  SettingDurationView.swift
 //  PickPack
 //
 //  Created by 추서연 on 8/21/24.
@@ -54,7 +54,7 @@ struct DurationField: View {
                                 .datePickerStyle(.compact)
                                 .labelsHidden()
                                 .background(Color.white)
-                                .onChange(of: startDate) { 
+                                .onChange(of: startDate) { _ in
                                     showStartDatePicker = false
                                 }
                             }
@@ -85,7 +85,7 @@ struct DurationField: View {
                                 .datePickerStyle(.compact)
                                 .labelsHidden()
                                 .background(Color.white)
-                                .onChange(of: endDate) { 
+                                .onChange(of: endDate) { _ in
                                     showEndDatePicker = false
                                 }
                             }

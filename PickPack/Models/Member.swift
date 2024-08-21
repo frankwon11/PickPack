@@ -13,6 +13,6 @@ struct Member: Identifiable, Codable, Hashable {
     let user: User
     
     var itemList: [Item]
-    
+  
     var color: CustomColor
 }

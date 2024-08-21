@@ -10,6 +10,17 @@
 		33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */; };
 		33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD72C67662600DECDC3 /* KeychainHelper.swift */; };
 		33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33388CD92C67747700DECDC3 /* AppleAuthManager.swift */; };
+		33A068E02C75C2B900EF0F09 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A068DF2C75C2B900EF0F09 /* Member.swift */; };
+		33A068E22C75C35D00EF0F09 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A068E12C75C35D00EF0F09 /* User.swift */; };
+		33A068E42C75C65700EF0F09 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A068E32C75C65700EF0F09 /* SharedItem.swift */; };
+		33A068E62C75C96300EF0F09 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A068E52C75C96300EF0F09 /* Room.swift */; };
+		33A068E82C75C9E900EF0F09 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A068E72C75C9E900EF0F09 /* CustomColor.swift */; };
+		4657826F2C75C2CC00149EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4657826D2C75C2CC00149EC1 /* Assets.xcassets */; };
+		4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657827D2C75D07E00149EC1 /* CreateRoomView.swift */; };
+		465782822C75D0C400149EC1 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782812C75D0C400149EC1 /* DestinationView.swift */; };
+		465782842C75D0F100149EC1 /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782832C75D0F100149EC1 /* DurationField.swift */; };
+		465782862C75D11600149EC1 /* RoomColorField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782852C75D11600149EC1 /* RoomColorField.swift */; };
+		465782882C75D12B00149EC1 /* RoomNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782872C75D12B00149EC1 /* RoomNameField.swift */; };
 		721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDE2C6FD2AE003606A4 /* RoomView.swift */; };
 		721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */; };
 		729F67F12C709C7700F470CB /* MyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F67F02C709C7700F470CB /* MyItemView.swift */; };
@@ -21,7 +32,6 @@
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
 		FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA972F2C3821E500473B51 /* PickPackApp.swift */; };
 		FBBA97322C3821E500473B51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97312C3821E500473B51 /* ContentView.swift */; };
-		FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBA97332C3821E700473B51 /* Assets.xcassets */; };
 		FBBA97552C43C0A500473B51 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA97542C43C0A500473B51 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +39,17 @@
 		33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
 		33388CD72C67662600DECDC3 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		33388CD92C67747700DECDC3 /* AppleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManager.swift; sourceTree = "<group>"; };
+		33A068DF2C75C2B900EF0F09 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		33A068E12C75C35D00EF0F09 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		33A068E32C75C65700EF0F09 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		33A068E52C75C96300EF0F09 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		33A068E72C75C9E900EF0F09 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		4657826D2C75C2CC00149EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4657827D2C75D07E00149EC1 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
+		465782812C75D0C400149EC1 /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
+		465782832C75D0F100149EC1 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
+		465782852C75D11600149EC1 /* RoomColorField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomColorField.swift; sourceTree = "<group>"; };
+		465782872C75D12B00149EC1 /* RoomNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNameField.swift; sourceTree = "<group>"; };
 		721F5FDE2C6FD2AE003606A4 /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewTabs.swift; sourceTree = "<group>"; };
 		729F67F02C709C7700F470CB /* MyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemView.swift; sourceTree = "<group>"; };
@@ -42,7 +63,6 @@
 		FBBA972C2C3821E500473B51 /* PickPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBA972F2C3821E500473B51 /* PickPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPackApp.swift; sourceTree = "<group>"; };
 		FBBA97312C3821E500473B51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FBBA97332C3821E700473B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBA97542C43C0A500473B51 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +85,26 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		4657826E2C75C2CC00149EC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4657826D2C75C2CC00149EC1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4657827C2C75D06B00149EC1 /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				4657827D2C75D07E00149EC1 /* CreateRoomView.swift */,
+				465782812C75D0C400149EC1 /* DestinationView.swift */,
+				465782832C75D0F100149EC1 /* DurationField.swift */,
+				465782852C75D11600149EC1 /* RoomColorField.swift */,
+				465782872C75D12B00149EC1 /* RoomNameField.swift */,
+			);
+			path = CreateRoom;
+			sourceTree = "<group>";
+		};
 		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +113,6 @@
 				729F67F02C709C7700F470CB /* MyItemView.swift */,
 			);
 			path = Room;
-			sourceTree = "<group>";
-		};
-		FB1050B22C6CE60A0014097E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FBBA97332C3821E700473B51 /* Assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		FB1050B32C6CE6420014097E /* App */ = {
@@ -104,6 +136,11 @@
 			children = (
 				FB1050BF2C6F366C0014097E /* Item.swift */,
 				FB1050C12C6F37EE0014097E /* ItemList.swift */,
+				33A068DF2C75C2B900EF0F09 /* Member.swift */,
+				33A068E12C75C35D00EF0F09 /* User.swift */,
+				33A068E32C75C65700EF0F09 /* SharedItem.swift */,
+				33A068E52C75C96300EF0F09 /* Room.swift */,
+				33A068E72C75C9E900EF0F09 /* CustomColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,7 +168,7 @@
 				FBBA974E2C3C20B700473B51 /* Managers */,
 				FB1050B52C6CE6700014097E /* Models */,
 				FB1050B42C6CE6610014097E /* Components */,
-				FB1050B22C6CE60A0014097E /* Resources */,
+				4657826E2C75C2CC00149EC1 /* Resources */,
 				33388CD62C67661600DECDC3 /* Helpers */,
 				FBBA97512C43B88300473B51 /* Views */,
 			);
@@ -149,6 +186,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4657827C2C75D06B00149EC1 /* CreateRoom */,
 				721F5FE02C6FD2AE003606A4 /* Room */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FBBA97542C43C0A500473B51 /* MainView.swift */,
@@ -223,7 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBA97342C3821E700473B51 /* Assets.xcassets in Resources */,
+				4657826F2C75C2CC00149EC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,21 +272,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465782882C75D12B00149EC1 /* RoomNameField.swift in Sources */,
+				33A068E42C75C65700EF0F09 /* SharedItem.swift in Sources */,
 				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
 				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
+				33A068E22C75C35D00EF0F09 /* User.swift in Sources */,
+				33A068E02C75C2B900EF0F09 /* Member.swift in Sources */,
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
+				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
+				33A068E82C75C9E900EF0F09 /* CustomColor.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
+				465782822C75D0C400149EC1 /* DestinationView.swift in Sources */,
+				33A068E62C75C96300EF0F09 /* Room.swift in Sources */,
+				465782862C75D11600149EC1 /* RoomColorField.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
+				4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

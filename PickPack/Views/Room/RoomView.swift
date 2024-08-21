@@ -10,19 +10,22 @@ import SwiftUI
 struct RoomView: View {
     // MARK: 방 이름 받아오기
     private let roomName: String = "순두부 여행"
+    // MARK: 방 컬러 받아오기
+    private let roomColor: Color = .indigo
+    
     @State private var offset: CGFloat = 0
     @State private var currentTab: RoomViewTabs = .MyItem
     
     var body: some View {
         // 네비게이션 링크로 들어올거니까 네비게이션스택은 주석
         //        NavigationStack {
-        VStack {
+        VStack(spacing: 0) {
             segmentedView
             
             // TODO: 탭뷰를 커스텀한 느낌으로 뷰 하나 만들어질 때마다 Spacer()에 뷰 넣기
             switch currentTab {
             case .MyItem:
-                Spacer()
+                MyItemView()
             case .FriendItem:
                 Spacer()
             case .SharedItem:
@@ -68,8 +71,7 @@ extension RoomView {
                     .foregroundStyle(.black1)
                     .overlay(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 50)
-                            // MARK: 방 컬러 받아오기
-                            .foregroundStyle(.indigo)
+                            .foregroundStyle(roomColor)
                             .frame(width: selectedBarWidth)
                             .offset(x: offset)
                     }
@@ -103,11 +105,14 @@ extension RoomView {
         }
         .frame(height: 38)
         .padding(.top, 12)
+        .padding(.bottom, 9)
         .padding(.horizontal, 30)
         
     }
 }
 
 #Preview {
-    RoomView()
+    NavigationStack {
+        RoomView()
+    }
 }

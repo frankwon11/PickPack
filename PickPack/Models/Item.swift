@@ -15,7 +15,7 @@ struct Item: Identifiable, Codable, Hashable {
     let theme: ItemTheme
     
     var isShared: Bool = false
-      
+    
     var isHidden: Bool = false
     
     var isPacked: Bool = false

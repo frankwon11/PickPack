@@ -57,6 +57,7 @@
 		FB1051092C765B520014097E /* SharedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051052C765B510014097E /* SharedItemView.swift */; };
 		FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051062C765B520014097E /* ShareItemDoneList.swift */; };
 		FB10510B2C765B520014097E /* SharedItemNotYetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051072C765B520014097E /* SharedItemNotYetList.swift */; };
+		FB10510D2C765C710014097E /* ReadyRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10510C2C765C710014097E /* ReadyRoomView.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -113,6 +114,7 @@
 		FB1051052C765B510014097E /* SharedItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemView.swift; sourceTree = "<group>"; };
 		FB1051062C765B520014097E /* ShareItemDoneList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareItemDoneList.swift; sourceTree = "<group>"; };
 		FB1051072C765B520014097E /* SharedItemNotYetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemNotYetList.swift; sourceTree = "<group>"; };
+		FB10510C2C765C710014097E /* ReadyRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyRoomView.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				465782832C75D0F100149EC1 /* DurationField.swift */,
 				465782852C75D11600149EC1 /* RoomColorField.swift */,
 				465782872C75D12B00149EC1 /* RoomNameField.swift */,
+				FB10510C2C765C710014097E /* ReadyRoomView.swift */,
 			);
 			path = CreateRoom;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */,
 				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
 				33A0693C2C76483100EF0F09 /* FriendSharedList.swift in Sources */,
+				FB10510D2C765C710014097E /* ReadyRoomView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
 				FB1051012C765A830014097E /* SettingRoomColorField.swift in Sources */,
 				33A068E82C75C9E900EF0F09 /* CustomColor.swift in Sources */,

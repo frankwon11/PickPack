@@ -29,7 +29,7 @@ struct SettingView: View {
                         Text("방 설정")
                         Spacer()
                         Button {
-                   g         router.push(view: .roomSettingView)
+                            router.push(view: .roomSettingView)
                         } label: {
                             Image(systemName: "chevron.right")
                                 .font(.title3)

@@ -9,14 +9,17 @@ import Foundation
 import FirebaseFirestore
 
 final class FirestoreManager: ObservableObject  {
-    @Published var reviews: [Room] = []
+    @Published var room: Room?
+    @Published var members: [Member] = []
     
     private var db = Firestore.firestore()
+    private var roomListener: ListenerRegistration?
+    private var membersListener: ListenerRegistration?
     
     static let shared = FirestoreManager()
     private init() {}
     
-    // MARK: - 유저 등록(회원가입 시 1회만 실행됨)
+    // 유저 등록(회원가입 시 1회만 실행됨)
     func addUser(id: String, name: String) {
         let usersCollection = db.collection("users")
         
@@ -45,9 +48,9 @@ final class FirestoreManager: ObservableObject  {
     }
 }
 
-// MARK: - Create Data
+// MARK: - Create 메서드 모음
 extension FirestoreManager {
-    // MARK: - Room 생성 및 Firestore에 저장
+    // Room 생성 및 Firestore에 저장
     func createRoom(id: String, code: String, startDate: Date, endDate: Date, name: String, color: CustomColor, userId: String) {
         let roomData: [String: Any] = [
             "id": id,
@@ -71,7 +74,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 Room에 Member 추가 (하위 컬렉션)
+    // 특정 Room에 Member 추가 (하위 컬렉션)
     func addMember(toRoom roomId: String, member: Member) {
         let roomRef = db.collection("rooms").document(roomId)
         let membersCollection = roomRef.collection("members")
@@ -86,7 +89,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 Room의 SharedItems 하위 컬렉션에 SharedItem 추가
+    // 특정 Room의 SharedItems 하위 컬렉션에 SharedItem 추가
     func addSharedItem(toRoom roomId: String, sharedItem: SharedItem) {
         let roomRef = db.collection("rooms").document(roomId)
         let sharedItemsCollection = roomRef.collection("sharedItems")
@@ -99,7 +102,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 Room의 특정 Member의 itemList에 Item 추가
+    // 특정 Room의 특정 Member의 itemList에 Item 추가
     func addItem(toRoom roomId: String, forMember memberId: String, item: Item) {
         let roomRef = db.collection("rooms").document(roomId)
         let memberRef = roomRef.collection("members").document(memberId)
@@ -126,7 +129,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 유저의 roomIdList에 roomId 추가
+    // 유저의 roomIdList에 roomId 추가
     private func addRoomToUser(userId: String, roomId: String) {
         let userRef = db.collection("users").document(userId)
         
@@ -157,8 +160,9 @@ extension FirestoreManager {
     }
 }
 
+// MARK: - Fetch 메서드 모음
 extension FirestoreManager {
-    // MARK: - 특정 User의 roomIdList를 이용해 Room 배열 가져오기 (첫 시작 시 사용 예상)
+    // 특정 User의 roomIdList를 이용해 Room 배열 가져오기 (첫 시작 시 사용 예상)
     func fetchRooms(forUser userId: String, completion: @escaping ([Room]) -> Void) {
           fetchUser(byId: userId) { user in
               guard let user = user else {
@@ -190,7 +194,7 @@ extension FirestoreManager {
           }
       }
     
-    // MARK: - 특정 Room 데이터 가져오기 (일단 구색 갖추기 위해서)
+    // 특정 Room 데이터 가져오기 (일단 구색 갖추기 위해서)
     func fetchRoom(byId roomId: String, completion: @escaping (Room?) -> Void) {
         let roomRef = db.collection("rooms").document(roomId)
         
@@ -211,7 +215,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 Room의 모든 Member 가져오기 (룸에 입장했을 때 요청 예상)
+    // 특정 Room의 모든 Member 가져오기 (룸에 입장했을 때 요청 예상)
     func fetchMembers(inRoom roomId: String, completion: @escaping ([Member]) -> Void) {
         let membersCollection = db.collection("rooms").document(roomId).collection("members")
         
@@ -230,7 +234,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 Room의 모든 SharedItem 가져오기(일단 사용 예상되는 곳은 없음)
+    // 특정 Room의 모든 SharedItem 가져오기(일단 사용 예상되는 곳은 없음)
     func fetchSharedItems(inRoom roomId: String, completion: @escaping ([SharedItem]) -> Void) {
         let sharedItemsCollection = db.collection("rooms").document(roomId).collection("sharedItems")
         
@@ -249,7 +253,7 @@ extension FirestoreManager {
         }
     }
     
-    // MARK: - 특정 User 데이터 가져오기 (fetchRooms에서 사용)
+    // 특정 User 데이터 가져오기 (fetchRooms에서 사용)
     func fetchUser(byId userId: String, completion: @escaping (User?) -> Void) {
         let userRef = db.collection("users").document(userId)
         
@@ -270,3 +274,131 @@ extension FirestoreManager {
         }
     }
 }
+
+// MARK: - Update 메서드 모음
+extension FirestoreManager {
+    // Room 구조체를 받아서 전체 업데이트
+    func updateRoom(_ room: Room) {
+        let roomRef = db.collection("rooms").document(room.id)
+        
+        do {
+            try roomRef.setData(from: room) { error in
+                if let error = error {
+                    print("Error updating room: \(error)")
+                } else {
+                    print("Room \(room.id) successfully updated.")
+                }
+            }
+        } catch {
+            print("Error encoding room: \(error)")
+        }
+    }
+    
+    // 특정 Room의 특정 Member 업데이트
+    func updateMember(inRoom roomId: String, member: Member) {
+        let memberRef = db.collection("rooms").document(roomId).collection("members").document(member.id)
+        
+        do {
+            try memberRef.setData(from: member) { error in
+                if let error = error {
+                    print("Error updating member \(member.id) in room \(roomId): \(error)")
+                } else {
+                    print("Member \(member.id) in room \(roomId) successfully updated.")
+                }
+            }
+        } catch {
+            print("Error encoding member \(member.id): \(error)")
+        }
+    }
+    
+    // 특정 Room의 SharedItem 업데이트
+    func updateSharedItem(inRoom roomId: String, sharedItem: SharedItem) {
+        let sharedItemRef = db.collection("rooms").document(roomId).collection("sharedItems").document(sharedItem.id)
+        
+        do {
+            try sharedItemRef.setData(from: sharedItem) { error in
+                if let error = error {
+                    print("Error updating shared item \(sharedItem.id) in room \(roomId): \(error)")
+                } else {
+                    print("Shared item \(sharedItem.id) in room \(roomId) successfully updated.")
+                }
+            }
+        } catch {
+            print("Error encoding shared item \(sharedItem.id): \(error)")
+        }
+    }
+}
+
+extension FirestoreManager {
+    // MARK: - Room과 Members를 실시간으로 listen하는 메서드
+        func listenToRoomAndMembers(roomId: String, roomCompletion: @escaping (Room?) -> Void, membersCompletion: @escaping ([Member]) -> Void) {
+            // 이전에 설정된 listener가 있다면 해제
+            roomListener?.remove()
+            membersListener?.remove()
+            
+            // 1. Room 문서에 대한 listener 설정
+            let roomRef = db.collection("rooms").document(roomId)
+            roomListener = roomRef.addSnapshotListener { documentSnapshot, error in
+                if let error = error {
+                    print("Error listening to room \(roomId): \(error)")
+                    roomCompletion(nil)
+                    return
+                }
+                
+                guard let document = documentSnapshot, document.exists, let room = try? document.data(as: Room.self) else {
+                    print("Room document does not exist or cannot be decoded.")
+                    roomCompletion(nil)
+                    return
+                }
+                
+                // 변경된 room 데이터를 반환
+                self.room = room
+                roomCompletion(room)
+            }
+            
+            // 2. Members 하위 컬렉션에 대한 listener 설정
+            let membersCollection = roomRef.collection("members")
+            membersListener = membersCollection.addSnapshotListener { querySnapshot, error in
+                if let error = error {
+                    print("Error listening to members in room \(roomId): \(error)")
+                    membersCompletion([])
+                    return
+                }
+                
+                let members = querySnapshot?.documents.compactMap { document in
+                    try? document.data(as: Member.self)
+                } ?? []
+                
+                // 변경된 members 데이터를 반환
+                self.members = members
+                membersCompletion(members)
+            }
+        }
+        
+        // MARK: - 모든 Listener 해제 메서드
+        func removeListeners() {
+            roomListener?.remove()
+            membersListener?.remove()
+            roomListener = nil
+            membersListener = nil
+        }
+// MARK: - Room Listener 사용 예시
+//    FirestoreManager.shared.listenToRoomAndMembers(
+//        roomId: "roomId123",
+//        roomCompletion: { room in
+//            if let room = room {
+//                print("Updated room data: \(room)")
+//            } else {
+//                print("Failed to retrieve room data or room does not exist.")
+//            }
+//        },
+//        membersCompletion: { members in
+//            print("Updated members data: \(members)")
+//        }
+//    )
+//
+//    // 필요 시 listener 해제
+//    FirestoreManager.shared.removeListeners()
+}
+
+

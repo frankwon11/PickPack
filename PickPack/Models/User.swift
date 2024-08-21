@@ -12,5 +12,5 @@ struct User: Identifiable, Codable, Hashable {
 
     var name: String
     
-    var roomIdList: [String]
+    var roomIdList: [String] = []
 }

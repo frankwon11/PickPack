@@ -7,105 +7,118 @@
 
 import SwiftUI
 
-struct RoomCreateTest: View {
+struct RoomCreateTest: View  {
     @StateObject private var firestoreManager = FirestoreManager.shared
     
+    // Room 및 Member 정보를 위한 상태 변수
+    @State private var roomName: String = "Vacation Room"
+    @State private var roomColor: CustomColor = .blue
+    @State private var memberName: String = "John Doe"
+    @State private var userId: String = "userId123"
     @State private var roomId: String = UUID().uuidString
-    @State private var memberId: String = UUID().uuidString
-    @State private var sharedItemId: String = UUID().uuidString
+    @State private var selectedMemberId: String?
+    
+    @State private var fetchedRoom: Room?
+    @State private var fetchedMembers: [Member] = []
+    
+    // Listen 상태를 추적하기 위한 상태 변수
+    @State private var isListening: Bool = false
+    
+    // Item 추가를 위한 상태 변수
+    @State private var newItemName: String = "New Item"
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("FirestoreManager Test")
-                .font(.largeTitle)
+            // Room 생성 버튼
+            Button("Create Room") {
+                let startDate = Date()
+                let endDate = Calendar.current.date(byAdding: .day, value: 7, to: startDate)!
+                firestoreManager.createRoom(id: roomId, code: "ROOM2024", startDate: startDate, endDate: endDate, name: roomName, color: roomColor, userId: userId)
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            
+            // Member 추가 버튼
+            Button("Add Member to Room") {
+                let memberId = UUID().uuidString
+                let member = Member(id: memberId, user: User(id: userId, name: memberName), itemList: [], color: .green)
+                firestoreManager.addMember(toRoom: roomId, member: member)
+                selectedMemberId = memberId
+            }
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            
+            // Room 및 Member 정보 가져오기 버튼
+            Button("Fetch Room and Members") {
+                firestoreManager.fetchRoom(byId: roomId) { room in
+                    self.fetchedRoom = room
+                }
+                
+                firestoreManager.fetchMembers(inRoom: roomId) { members in
+                    self.fetchedMembers = members
+                }
+            }
+            .padding()
+            .background(Color.orange)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            
+            // Room 및 Members 실시간 업데이트 Listen 버튼
+            Button(isListening ? "Stop Listening to Room and Members" : "Listen to Room and Members") {
+                if isListening {
+                    firestoreManager.removeListeners()
+                    isListening = false
+                } else {
+                    firestoreManager.listenToRoomAndMembers(roomId: roomId) { room in
+                        self.fetchedRoom = room
+                    } membersCompletion: { members in
+                        self.fetchedMembers = members
+                    }
+                    isListening = true
+                }
+            }
+            .padding()
+            .background(isListening ? Color.red : Color.purple)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            
+            // 특정 Member의 itemList에 Item 추가 버튼
+            if let memberId = selectedMemberId {
+                Button("Add Item to Member's Item List") {
+                    let newItem = Item(id: UUID().uuidString, name: newItemName, theme: .essentials)
+                    firestoreManager.addItem(toRoom: roomId, forMember: memberId, item: newItem)
+                }
                 .padding()
-            
-            // Room 생성 및 저장 테스트
-            Button(action: {
-                createRoomTest()
-            }) {
-                Text("Create Room")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(8)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(8)
             }
             
-            // Member 추가 테스트
-            Button(action: {
-                addMemberTest()
-            }) {
-                Text("Add Member")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.green)
-                    .cornerRadius(8)
+            // Room 정보 표시
+            if let fetchedRoom = fetchedRoom {
+                Text("Room Name: \(fetchedRoom.name)")
+                Text("Room Color: \(fetchedRoom.color.rawValue)")
+                Text("Room Code: \(fetchedRoom.code)")
             }
             
-            // Shared Item 추가 테스트
-            Button(action: {
-                addSharedItemTest()
-            }) {
-                Text("Add Shared Item")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.orange)
-                    .cornerRadius(8)
-            }
-            
-            // 특정 Member의 ItemList에 Item 추가 테스트
-            Button(action: {
-                addItemToMemberTest()
-            }) {
-                Text("Add Item to Member")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.purple)
-                    .cornerRadius(8)
+            // Member 정보 표시
+            List(fetchedMembers) { member in
+                VStack(alignment: .leading) {
+                    Text("Member Name: \(member.user.name)")
+                    Text("Member Color: \(member.color.rawValue)")
+                    
+                    // Member의 itemList 표시
+                    ForEach(member.itemList) { item in
+                        Text("- \(item.name) (\(item.theme.rawValue))")
+                    }
+                }
             }
         }
         .padding()
-    }
-    
-    // Room 생성 및 저장 테스트 메서드
-    private func createRoomTest() {
-        firestoreManager.createRoom(
-            id: roomId,
-            code: "ROOM123",
-            startDate: Date(),
-            endDate: Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date(),
-            name: "Holiday Trip",
-            color: .blue
-        )
-    }
-    
-    // Member 추가 테스트 메서드
-    private func addMemberTest() {
-        let newMember = Member(
-            id: memberId,
-            user: User(id: UUID().uuidString, name: "Alice"),
-            itemList: [],
-            color: .green
-        )
-        firestoreManager.addMember(toRoom: roomId, member: newMember)
-    }
-    
-    // Shared Item 추가 테스트 메서드
-    private func addSharedItemTest() {
-        let newSharedItem = SharedItem(
-            id: sharedItemId,
-            name: "Tripod",
-            item: Item(id: UUID().uuidString, name: "Tripod", theme: .electronics),
-            ownerId: memberId,
-            sharedMemberIdList: [UUID().uuidString]
-        )
-        firestoreManager.addSharedItem(toRoom: roomId, sharedItem: newSharedItem)
-    }
-    
-    // 특정 Member의 ItemList에 Item 추가 테스트 메서드
-    private func addItemToMemberTest() {
-        let newItem = Item(id: UUID().uuidString, name: "Laptop", theme: .electronics)
-        firestoreManager.addItem(toRoom: roomId, forMember: memberId, item: newItem)
     }
 }
 

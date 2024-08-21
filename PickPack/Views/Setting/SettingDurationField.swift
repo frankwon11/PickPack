@@ -1,14 +1,16 @@
 //
-//  DurationField.swift
+//  SettingDurationField.swift
 //  PickPack
 //
-//  Created by 추서연 on 8/21/24.
+//  Created by 추서연 on 8/22/24.
 //
+
+
 
 import SwiftUI
 import Combine
 
-struct DurationField: View {
+struct SettingDurationField: View {
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var showStartDatePicker = false
@@ -25,11 +27,12 @@ struct DurationField: View {
             Text("여행 기간")
                 .font(.callout)
                 .padding(.horizontal, 30)
-                .foregroundColor(.indigo)
+                .foregroundColor(.black)
             
             
             HStack(spacing: 20) {
                 HStack {
+                    Spacer()
                     VStack {
                         
                         ZStack(alignment: .leading) {
@@ -39,7 +42,7 @@ struct DurationField: View {
                                 .background(
                                     RoundedRectangle(cornerRadius: 16)
                                         .stroke(Color.gray.opacity(0.4), lineWidth: 0)
-                                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.2)))
+                                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
                                 )
                                 .onTapGesture {
                                     showStartDatePicker.toggle()
@@ -54,9 +57,10 @@ struct DurationField: View {
                                 .datePickerStyle(.compact)
                                 .labelsHidden()
                                 .background(Color.white)
-                                .onChange(of: startDate) {
+                                .onChange(of: startDate) { oldValue, newValue in
                                     showStartDatePicker = false
                                 }
+
                             }
                         }
                     }
@@ -70,7 +74,7 @@ struct DurationField: View {
                                 .background(
                                     RoundedRectangle(cornerRadius: 16)
                                         .stroke(Color.gray.opacity(0.4), lineWidth: 0)
-                                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.2)))
+                                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
                                 )
                                 .onTapGesture {
                                     showEndDatePicker.toggle()
@@ -85,12 +89,12 @@ struct DurationField: View {
                                 .datePickerStyle(.compact)
                                 .labelsHidden()
                                 .background(Color.white)
-                                .onChange(of: endDate) {
+                                .onChange(of: endDate) { oldValue, newValue in
                                     showEndDatePicker = false
-                                }
-                            }
+                                }                            }
                         }
                     }
+                    Spacer()
                 }
                 .padding(.horizontal, 30)
                 
@@ -100,5 +104,5 @@ struct DurationField: View {
 }
 
 #Preview {
-    DurationField()
+    SettingDurationField()
 }

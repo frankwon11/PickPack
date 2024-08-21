@@ -1,14 +1,13 @@
 //
-//  RoomColorField.swift
+//  SettingRoomColorField.swift
 //  PickPack
 //
-//  Created by 추서연 on 8/21/24.
+//  Created by 추서연 on 8/22/24.
 //
-
 
 import SwiftUI
 
-struct RoomColorField: View {
+struct SettingRoomColorField: View {
     @State private var showModal = false
     @State private var selectedColor: Color = .indigo
     var body: some View {
@@ -17,7 +16,7 @@ struct RoomColorField: View {
                 Text("방 색상")
                     .font(.callout)
                     .padding(.horizontal, 30)
-                    .foregroundColor(.indigo)
+                    .foregroundColor(.black)
                 
                 Spacer()
                 
@@ -30,14 +29,15 @@ struct RoomColorField: View {
                         Image(systemName: "arrowtriangle.down.fill")
                             .padding(10)
                     }
-                    
+                    .background(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(Color.gray.opacity(0.4), lineWidth: 0)
-                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.2)))
+                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
                         .frame(width: 80, height: 44)
                         .onTapGesture {
                             showModal.toggle()
                         }
+                    )
                 }
                 .padding(.horizontal, 15)
             }
@@ -52,9 +52,7 @@ struct RoomColorField: View {
     }
 }
 
-import SwiftUI
-
-struct ColorPickerView: View {
+struct SettingColorPickerView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var selectedColor: Color // Binding to the parent's color state
     
@@ -150,13 +148,13 @@ struct ColorPickerView: View {
         selectedColor = color
     }
 }
+//
+//#Preview {
+//    SettingColorPickerView(selectedColor: .constant(.indigo))
+//}
+
 
 #Preview {
-    ColorPickerView(selectedColor: .constant(.indigo))
-}
-
-
-#Preview {
-    RoomColorField()
+    SettingRoomColorField()
 }
 

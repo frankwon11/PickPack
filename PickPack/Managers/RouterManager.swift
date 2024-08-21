@@ -19,6 +19,17 @@ class RouterManager: ObservableObject {
             
         case .historyView:
             HistoryView()
+            
+        case .settingView:
+            SettingView()
+        case .roomSettingView:
+            RoomSettingView()
+        case .faqView:
+            FAQView()
+        case .readyRoomView:
+            ReadyRoomView()
+        case .createRoomView:
+            CreateRoomView()
         }
     }
     
@@ -47,4 +58,14 @@ enum PickPackView: Hashable {
     case roomView
     
     case historyView
+    
+    case settingView
+    
+    case roomSettingView
+    
+    case faqView
+    
+    case readyRoomView
+    
+    case createRoomView
 }

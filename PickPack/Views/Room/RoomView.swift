@@ -29,7 +29,7 @@ struct RoomView: View {
             case .FriendItem:
                 Spacer()
             case .SharedItem:
-                Spacer()
+                SharedItemView()
             }
         }
         .navigationTitle(roomName)
@@ -48,7 +48,7 @@ struct RoomView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    // TODO: 설정 버튼 구현
+                    router.push(view: .settingView)
                 } label: {
                     Image(systemName: "gearshape")
                         .font(.title3)

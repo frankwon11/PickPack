@@ -46,6 +46,18 @@
 		FB1050EF2C762EE10014097E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050EE2C762EE10014097E /* HistoryView.swift */; };
 		FB1050F12C7641280014097E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F02C7641280014097E /* Date+Extension.swift */; };
 		FB1050F32C764F0E0014097E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1050F22C764F0D0014097E /* GoogleService-Info.plist */; };
+		FB1050FC2C765A830014097E /* SettingRoomNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F52C765A830014097E /* SettingRoomNameField.swift */; };
+		FB1050FD2C765A830014097E /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F62C765A830014097E /* SettingView.swift */; };
+		FB1050FE2C765A830014097E /* SettingDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F72C765A830014097E /* SettingDestinationView.swift */; };
+		FB1050FF2C765A830014097E /* SettingDurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F82C765A830014097E /* SettingDurationField.swift */; };
+		FB1051002C765A830014097E /* RoomSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F92C765A830014097E /* RoomSettingView.swift */; };
+		FB1051012C765A830014097E /* SettingRoomColorField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050FA2C765A830014097E /* SettingRoomColorField.swift */; };
+		FB1051022C765A830014097E /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050FB2C765A830014097E /* FAQView.swift */; };
+		FB1051082C765B520014097E /* SharedItemNotYet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051042C765B510014097E /* SharedItemNotYet.swift */; };
+		FB1051092C765B520014097E /* SharedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051052C765B510014097E /* SharedItemView.swift */; };
+		FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051062C765B520014097E /* ShareItemDoneList.swift */; };
+		FB10510B2C765B520014097E /* SharedItemNotYetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051072C765B520014097E /* SharedItemNotYetList.swift */; };
+		FB10510D2C765C710014097E /* ReadyRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10510C2C765C710014097E /* ReadyRoomView.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -91,6 +103,18 @@
 		FB1050EE2C762EE10014097E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		FB1050F02C7641280014097E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FB1050F22C764F0D0014097E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB1050F52C765A830014097E /* SettingRoomNameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingRoomNameField.swift; sourceTree = "<group>"; };
+		FB1050F62C765A830014097E /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		FB1050F72C765A830014097E /* SettingDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDestinationView.swift; sourceTree = "<group>"; };
+		FB1050F82C765A830014097E /* SettingDurationField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDurationField.swift; sourceTree = "<group>"; };
+		FB1050F92C765A830014097E /* RoomSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSettingView.swift; sourceTree = "<group>"; };
+		FB1050FA2C765A830014097E /* SettingRoomColorField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingRoomColorField.swift; sourceTree = "<group>"; };
+		FB1050FB2C765A830014097E /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		FB1051042C765B510014097E /* SharedItemNotYet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemNotYet.swift; sourceTree = "<group>"; };
+		FB1051052C765B510014097E /* SharedItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemView.swift; sourceTree = "<group>"; };
+		FB1051062C765B520014097E /* ShareItemDoneList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareItemDoneList.swift; sourceTree = "<group>"; };
+		FB1051072C765B520014097E /* SharedItemNotYetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemNotYetList.swift; sourceTree = "<group>"; };
+		FB10510C2C765C710014097E /* ReadyRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyRoomView.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -153,6 +177,7 @@
 				465782832C75D0F100149EC1 /* DurationField.swift */,
 				465782852C75D11600149EC1 /* RoomColorField.swift */,
 				465782872C75D12B00149EC1 /* RoomNameField.swift */,
+				FB10510C2C765C710014097E /* ReadyRoomView.swift */,
 			);
 			path = CreateRoom;
 			sourceTree = "<group>";
@@ -160,9 +185,10 @@
 		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				33A069332C76483100EF0F09 /* FriendItem */,
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
+				FB1051032C765B2E0014097E /* SharedItem */,
+				33A069332C76483100EF0F09 /* FriendItem */,
 				7243C1492C75E8120087125E /* MyItem */,
 			);
 			path = Room;
@@ -237,6 +263,31 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		FB1050F42C765A5A0014097E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FB1050FB2C765A830014097E /* FAQView.swift */,
+				FB1050F92C765A830014097E /* RoomSettingView.swift */,
+				FB1050F72C765A830014097E /* SettingDestinationView.swift */,
+				FB1050F82C765A830014097E /* SettingDurationField.swift */,
+				FB1050FA2C765A830014097E /* SettingRoomColorField.swift */,
+				FB1050F52C765A830014097E /* SettingRoomNameField.swift */,
+				FB1050F62C765A830014097E /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FB1051032C765B2E0014097E /* SharedItem */ = {
+			isa = PBXGroup;
+			children = (
+				FB1051042C765B510014097E /* SharedItemNotYet.swift */,
+				FB1051072C765B520014097E /* SharedItemNotYetList.swift */,
+				FB1051052C765B510014097E /* SharedItemView.swift */,
+				FB1051062C765B520014097E /* ShareItemDoneList.swift */,
+			);
+			path = SharedItem;
+			sourceTree = "<group>";
+		};
 		FBBA97232C3821E500473B51 = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +331,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB1050F42C765A5A0014097E /* Setting */,
 				FB1050ED2C762ECB0014097E /* History */,
 				FB1050EC2C7617F60014097E /* Login */,
 				FB1050EB2C7617C80014097E /* Main */,
@@ -379,6 +431,7 @@
 				33388CDA2C67747700DECDC3 /* AppleAuthManager.swift in Sources */,
 				33388CD42C6760AF00DECDC3 /* AppleLoginView.swift in Sources */,
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
+				FB1050FD2C765A830014097E /* SettingView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				33A068E22C75C35D00EF0F09 /* User.swift in Sources */,
 				FB1050EF2C762EE10014097E /* HistoryView.swift in Sources */,
@@ -387,28 +440,39 @@
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				7243C1532C75F4C70087125E /* MySharedItemListView.swift in Sources */,
+				FB1051092C765B520014097E /* SharedItemView.swift in Sources */,
 				33A069322C7643E800EF0F09 /* FirebaseLoginTest.swift in Sources */,
+				FB1051082C765B520014097E /* SharedItemNotYet.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
+				FB1051002C765A830014097E /* RoomSettingView.swift in Sources */,
 				FB1050F12C7641280014097E /* Date+Extension.swift in Sources */,
 				FB1050EA2C7614A60014097E /* RouterManager.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
+				FB1050FE2C765A830014097E /* SettingDestinationView.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				33A069302C7643AE00EF0F09 /* FirestoreManager.swift in Sources */,
+				FB10510B2C765B520014097E /* SharedItemNotYetList.swift in Sources */,
+				FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */,
 				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
 				33A0693C2C76483100EF0F09 /* FriendSharedList.swift in Sources */,
+				FB10510D2C765C710014097E /* ReadyRoomView.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,
+				FB1051012C765A830014097E /* SettingRoomColorField.swift in Sources */,
 				33A068E82C75C9E900EF0F09 /* CustomColor.swift in Sources */,
 				FBBA97552C43C0A500473B51 /* MainView.swift in Sources */,
+				FB1050FF2C765A830014097E /* SettingDurationField.swift in Sources */,
 				465782822C75D0C400149EC1 /* DestinationView.swift in Sources */,
 				33A068E62C75C96300EF0F09 /* Room.swift in Sources */,
 				7243C14D2C75E8700087125E /* MyItemListView.swift in Sources */,
 				465782862C75D11600149EC1 /* RoomColorField.swift in Sources */,
+				FB1051022C765A830014097E /* FAQView.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,
 				7243C1512C75E9CF0087125E /* MyItemRow.swift in Sources */,
 				33A0693A2C76483100EF0F09 /* FriendRow.swift in Sources */,
+				FB1050FC2C765A830014097E /* SettingRoomNameField.swift in Sources */,
 				33A0693E2C76483100EF0F09 /* FriendItemRowView.swift in Sources */,
 				4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */,
 			);

@@ -14,32 +14,29 @@ struct CreateRoomView: View {
     private let characterLimit = 7
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("새 여행 만들기")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(15)
-                    Spacer()
-                }
-                
-                RoomNameField()
-                    .padding(.vertical,15)
-                
-                DestinationView()
-                    .padding(.vertical,15)
-                
-                DurationField()
-                    .padding(.vertical,15)
-                
-                RoomColorField()
-                    .padding(.vertical,15)
-                
+        VStack(alignment: .leading) {
+            HStack {
+                Text("새 여행 만들기")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(15)
+                Spacer()
             }
-            .padding(.top, 80)
-            Spacer()
+            
+            RoomNameField()
+                .padding(.vertical,15)
+            
+            DestinationView()
+                .padding(.vertical,15)
+            
+            DurationField()
+                .padding(.vertical,15)
+            
+            RoomColorField()
+                .padding(.vertical,15)
+            
         }
+        .padding(.top, 80)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {

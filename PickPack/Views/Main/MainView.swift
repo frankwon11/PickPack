@@ -61,7 +61,7 @@ extension MainView {
             Spacer()
             
             Button {
-                // TODO: 여행 추가 페이지로 이동; 네비게이션 링크로 변경
+                router.push(view: .readyRoomView)
             } label: {
                 Image(systemName: "plus.square.dashed")
                     .font(.system(size: 26))

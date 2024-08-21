@@ -13,18 +13,17 @@ struct FriendItemRowView: View {
     
     var body: some View {
         HStack {
-            
             Image(systemName: item.isPacked ? "checkmark.square.fill" : "square")
-                .resizable()
-                .frame(width: 20, height: 20)
+                .font(.title3)
                 .foregroundColor(item.isPacked ? color : .gray)
                 .padding(.trailing, 8)
             
             Text(item.name)
-                .strikethrough(item.isPacked, color: .black)
+                .font(.callout)
             
             Spacer()
         }
+        .padding(.leading, 20)
         .padding(.vertical, 8)
     }
 }

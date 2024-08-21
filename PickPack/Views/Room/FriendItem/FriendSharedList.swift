@@ -24,6 +24,7 @@ struct FriendSharedList: View {
             HStack {
                 Text("\(member.user.name)님이 챙길 공유짐")
                     .font(.callout)
+                    .fontWeight(.semibold)
                     .foregroundStyle(member.color.color)
                     .padding(.leading, 20)
                 
@@ -56,6 +57,12 @@ struct FriendSharedList: View {
                 
                 ForEach(shared, id: \.self) { item in
                     FriendItemRowView(item: item, color: member.color.color)
+                    if let lastItem = shared.last {
+                        if item.id != lastItem.id{
+                            Divider()
+                                .background(.black4)
+                        }
+                    }
                 }
             }
         }

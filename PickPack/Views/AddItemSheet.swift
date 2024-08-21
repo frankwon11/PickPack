@@ -10,7 +10,7 @@ import SwiftUI
 struct AddItemSheet: View {
     // TODO: 상위 뷰에서 State로 넘겨주고, Binding으로 받아서 사용.
 //    /*@Binding */var itemList: ItemList = ItemList()
-    let itemList: ItemList = ItemList()
+    @State private var itemList: ItemList = ItemList()
     @Binding var items: [Item]
     @Binding var isSheetDisplaying: Bool
     
@@ -38,15 +38,15 @@ struct AddItemSheet: View {
                 Spacer()
                 
                 // TODO: sheet 만들어야됨
-                Button {
-                    isCustomItemSheetDisplaying = true
+                NavigationLink {
+                    CustomItemAddView(itemList: $itemList, roomColor: roomColor)
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8)
                             .foregroundStyle(.white)
                         
                         HStack{
-                            Text("사용자 정의 짐 추가하기")
+                            Text("사용자정의 짐 추가하기")
                                 .font(.subheadline)
                                 .foregroundStyle(roomColor)
                             

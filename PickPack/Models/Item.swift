@@ -31,7 +31,9 @@ enum ItemTheme: String, Codable, CaseIterable {
     case cosmetics = "화장품"
     case medication = "의약품"
     case officeSupplies = "사무용품"
+    case electronics = "전자기기"
     case swimGear = "수영용품"
     case golfGear = "골프용품"
+    case seasonalItems = "계절용품"
     case others = "기타"
 }

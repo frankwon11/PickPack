@@ -18,19 +18,23 @@ struct AppleLoginView: View {
     
     private struct AppleSigninButton: View {
         @EnvironmentObject var authManager: AppleAuthManager
+        @State private var currentNonce: String?
         
         var body: some View{
             SignInWithAppleButton(
                 // 이름과 이메일로 인증 요청
                 onRequest: { request in
-                    request.requestedScopes = [.fullName, .email]
-                },
+                               let nonce = authManager.randomNonceString()
+                               currentNonce = nonce
+                               request.requestedScopes = [.fullName, .email]
+                               request.nonce = authManager.sha256(nonce)
+                           },
                 onCompletion: { result in
                     // 요청 결과 처리
                     switch result {
                     case .success(let authResults):
                         print("Apple Login Successful")
-                        authManager.handleSuccessfulLogin(with: authResults)
+                        authManager.handleSuccessfulLogin(with: authResults, rawNonce: currentNonce)
                         authManager.authState = .signedIn
                     case .failure(let error):
                         authManager.handleLoginError(with: error)

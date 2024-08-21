@@ -15,8 +15,10 @@ struct FriendItemView: View {
 
     
     var body: some View {
-        NavigationStack{
-            ScrollView{
+        ZStack {
+            Color.black1
+            
+            ScrollView {
                 VStack(spacing: 10) {
                     // 배열이 비었을 때
                     if members.isEmpty {
@@ -70,6 +72,8 @@ extension FriendItemView {
                 
             })
         }
+        .padding(.top, 180)
+
         
     }
     

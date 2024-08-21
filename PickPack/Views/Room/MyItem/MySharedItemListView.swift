@@ -35,11 +35,11 @@ struct MySharedItemListView: View {
                     
                     // 토글 버튼
                     Button {
-//                        withAnimation {
+                        withAnimation {
                             isExpanded.toggle()
-//                        }
+                        }
                     } label: {
-                        Image(systemName: isExpanded ? "triangle.fill" : "triangle.fill")
+                        Image(systemName: "triangle.fill")
                             .font(.subheadline)
                             .fontWeight(.regular)
                             .foregroundStyle(.black5)

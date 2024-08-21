@@ -27,7 +27,8 @@ struct RoomView: View {
             case .MyItem:
                 MyItemView()
             case .FriendItem:
-                Spacer()
+                // TODO: 멤버 넣어주기
+                FriendItemView(members: .constant([]))
             case .SharedItem:
                 Spacer()
             }

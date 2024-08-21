@@ -30,6 +30,7 @@ struct FriendItemList: View {
             HStack {
                 Text("\(itemTheme.rawValue)")
                     .font(.callout)
+                    .fontWeight(.semibold)
                     .foregroundStyle(color)
                     .padding(.leading, 20)
                 
@@ -37,6 +38,7 @@ struct FriendItemList: View {
                 
                 Text("\(friendItemsPacked.count)/\(friendItems.count)")
                     .font(.subheadline)
+                    .fontWeight(.regular)
                     .foregroundStyle(.black5)
                 
                 Button(action: {
@@ -45,8 +47,8 @@ struct FriendItemList: View {
                     }
                 }, label: {
                     Image(systemName: "triangleshape.fill")
-                        .resizable()
-                        .frame(width: 14, height: 10)
+                        .font(.subheadline)
+                        .fontWeight(.regular)
                         .rotationEffect(isOpend ? Angle(degrees: 180) : Angle(degrees: 0))
                         .foregroundStyle(.black5)
                 })
@@ -71,7 +73,6 @@ struct FriendItemList: View {
                 
                 ForEach(friendItems.indices, id: \.self) { index in
                     FriendItemRowView(item: itemList[friendItems[index]], color: color)
-                        .padding(.leading, 20)
 
                     if index != friendItems.indices.last {
                         Rectangle()

@@ -44,8 +44,8 @@ struct HistoryRow: View {
     let name: String = "순두부여행"
     let place = "강원도 강릉시"
 
-    let startDate = "2025.02.12 (월)"
-    let endDate = "2025.02.15 (목)"
+    let startDate = Date.now
+    let endDate = Date.now
     
     let user = "슌"
     let members = ["헤이즐", "세이디", "앤드류"]
@@ -71,16 +71,16 @@ struct HistoryRow: View {
                 .fontWeight(.regular)
                 .foregroundStyle(.black6)
             
+            
             HStack {
-                Text("\(startDate) ~ \(endDate)")
+                Text("\(startDate.dateString) ~ \(endDate.dateString)")
                     .font(.subheadline)
                     .fontWeight(.regular)
                     .foregroundStyle(.black6)
                 
                 Spacer()
                 
-                // TODO: 몇박 며칠 계산 Date Extension 추가
-                Text("3박 4일")
+                Text("\(startDate.getDuration(to: endDate))")
                     .font(.subheadline)
                     .fontWeight(.regular)
                     .foregroundColor(.white)

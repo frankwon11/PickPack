@@ -12,6 +12,7 @@ struct CustomItemAddView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var text: String = ""
     @State private var theme: ItemTheme?
+    @FocusState var isFocused: Bool
     
     let roomColor: Color
     
@@ -25,6 +26,7 @@ struct CustomItemAddView: View {
                         .foregroundStyle(.white)
                     
                     TextField("사용자정의 짐", text: $text)
+                        .focused($isFocused)
                         .padding(.horizontal, 16)
                         .onChange(of: text) {
                             if text.count > 10 {
@@ -62,7 +64,6 @@ struct CustomItemAddView: View {
                         
                         Picker("", selection: $theme) {
                             Text("선택")
-                                .tint(.black4)
                             
                             Divider()
                             
@@ -85,6 +86,9 @@ struct CustomItemAddView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .background(.black1)
+        .onAppear {
+            isFocused = true
+        }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {

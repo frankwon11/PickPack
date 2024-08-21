@@ -41,7 +41,8 @@ struct RoomView: View {
                     router.backToMain()
                 } label: {
                     Image(systemName: "house")
-                        .font(.title3)
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
                         .foregroundStyle(.black6)
                         .padding(10)
                 }
@@ -51,7 +52,8 @@ struct RoomView: View {
                     router.push(view: .settingView)
                 } label: {
                     Image(systemName: "gearshape")
-                        .font(.title3)
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
                         .foregroundStyle(.black6)
                         .padding(10)
                 }
@@ -111,5 +113,7 @@ extension RoomView {
 }
 
 #Preview {
-    RoomView()
+    NavigationStack {
+        RoomView()
+    }
 }

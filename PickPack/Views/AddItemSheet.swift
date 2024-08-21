@@ -19,68 +19,70 @@ struct AddItemSheet: View {
     @State private var isCustomItemSheetDisplaying: Bool = false
     
     var body: some View {
-        VStack {
-            ScrollView {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 20)
-                    
-                    VStack(spacing: 0) {
-                        ForEach(filteredThemes(), id: \.self) { theme in
-                            ThemeRow(theme: theme, items: itemList.filterItems(by: theme))
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 20)
+                        
+                        VStack(spacing: 0) {
+                            ForEach(filteredThemes(), id: \.self) { theme in
+                                ThemeRow(theme: theme, items: itemList.filterItems(by: theme))
+                            }
                         }
                     }
                 }
+                
+                Spacer()
+                
+                // TODO: sheet 만들어야됨
+                Button {
+                    isCustomItemSheetDisplaying = true
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundStyle(.white)
+                        
+                        HStack{
+                            Text("사용자 정의 짐 추가하기")
+                                .font(.subheadline)
+                                .foregroundStyle(roomColor)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                                .font(.callout)
+                                .foregroundStyle(roomColor)
+                        }
+                        .padding(.horizontal, 24)
+                    }
+                }
+                .frame(height: 50)
+                .padding(.horizontal, 20)
             }
-            
-            Spacer()
-            
-            // TODO: sheet 만들어야됨
-            Button {
-                isCustomItemSheetDisplaying = true
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundStyle(.white)
-                    
-                    HStack{
-                        Text("사용자 정의 짐 추가하기")
-                            .font(.subheadline)
-                            .foregroundStyle(roomColor)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "chevron.right")
-                            .font(.callout)
+            .background(.black1)
+            .searchable(text: $searchText, prompt: "검색할 항목을 입력하세요")
+            .navigationTitle("새로운 짐 추가하기")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        isSheetDisplaying = false
+                    }) {
+                        Text("취소")
+                            .foregroundStyle(.black)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // TODO: 완료 버튼 동작 추가
+                        isSheetDisplaying = false
+                    }) {
+                        Text("완료")
                             .foregroundStyle(roomColor)
                     }
-                    .padding(.horizontal, 24)
-                }
-            }
-            .frame(height: 50)
-            .padding(.horizontal, 20)
-        }
-        .background(.black1)
-        .searchable(text: $searchText, prompt: "검색할 항목을 입력하세요")
-        .navigationTitle("새로운 짐 추가하기")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    isSheetDisplaying = false
-                }) {
-                    Text("취소")
-                        .foregroundStyle(.black)
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    // TODO: 완료 버튼 동작 추가
-                    isSheetDisplaying = false
-                }) {
-                    Text("완료")
-                        .foregroundStyle(roomColor)
                 }
             }
         }

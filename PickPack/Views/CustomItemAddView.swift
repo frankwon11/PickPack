@@ -40,7 +40,7 @@ struct CustomItemAddView: View {
                                 text = ""
                             } label: {
                                 Image(systemName: "multiply.circle.fill")
-                                    .padding(10)
+                                    .padding(.trailing, 10)
                                     .foregroundStyle(.black4)
                             }
                             .padding(.trailing, 10)
@@ -82,6 +82,7 @@ struct CustomItemAddView: View {
             .padding(.horizontal, 20)
         }
         .navigationTitle("사용자정의 짐 추가하기")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .background(.black1)
         .toolbar {
@@ -114,6 +115,6 @@ struct CustomItemAddView: View {
 
 #Preview {
     NavigationStack {
-        RoomView()
+        CustomItemAddView(itemList: .constant(.init()), roomColor: .indigo)
     }
 }

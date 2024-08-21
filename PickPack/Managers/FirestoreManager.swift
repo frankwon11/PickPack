@@ -156,3 +156,117 @@ extension FirestoreManager {
         }
     }
 }
+
+extension FirestoreManager {
+    // MARK: - 특정 User의 roomIdList를 이용해 Room 배열 가져오기 (첫 시작 시 사용 예상)
+    func fetchRooms(forUser userId: String, completion: @escaping ([Room]) -> Void) {
+          fetchUser(byId: userId) { user in
+              guard let user = user else {
+                  print("Failed to fetch user.")
+                  completion([])
+                  return
+              }
+              
+              let roomIds = user.roomIdList
+              if roomIds.isEmpty {
+                  completion([])
+                  return
+              }
+              
+              let roomsCollection = self.db.collection("rooms")
+              roomsCollection.whereField("id", in: roomIds).getDocuments { (querySnapshot, error) in
+                  if let error = error {
+                      print("Error fetching rooms: \(error)")
+                      completion([])
+                      return
+                  }
+                  
+                  let rooms = querySnapshot?.documents.compactMap { document in
+                      try? document.data(as: Room.self)
+                  } ?? []
+                  
+                  completion(rooms)
+              }
+          }
+      }
+    
+    // MARK: - 특정 Room 데이터 가져오기 (일단 구색 갖추기 위해서)
+    func fetchRoom(byId roomId: String, completion: @escaping (Room?) -> Void) {
+        let roomRef = db.collection("rooms").document(roomId)
+        
+        roomRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching room: \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let document = document, document.exists, let room = try? document.data(as: Room.self) else {
+                print("Room document does not exist or cannot be decoded.")
+                completion(nil)
+                return
+            }
+            
+            completion(room)
+        }
+    }
+    
+    // MARK: - 특정 Room의 모든 Member 가져오기 (룸에 입장했을 때 요청 예상)
+    func fetchMembers(inRoom roomId: String, completion: @escaping ([Member]) -> Void) {
+        let membersCollection = db.collection("rooms").document(roomId).collection("members")
+        
+        membersCollection.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching members: \(error)")
+                completion([])
+                return
+            }
+            
+            let members = querySnapshot?.documents.compactMap { document in
+                try? document.data(as: Member.self)
+            } ?? []
+            
+            completion(members)
+        }
+    }
+    
+    // MARK: - 특정 Room의 모든 SharedItem 가져오기(일단 사용 예상되는 곳은 없음)
+    func fetchSharedItems(inRoom roomId: String, completion: @escaping ([SharedItem]) -> Void) {
+        let sharedItemsCollection = db.collection("rooms").document(roomId).collection("sharedItems")
+        
+        sharedItemsCollection.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching shared items: \(error)")
+                completion([])
+                return
+            }
+            
+            let sharedItems = querySnapshot?.documents.compactMap { document in
+                try? document.data(as: SharedItem.self)
+            } ?? []
+            
+            completion(sharedItems)
+        }
+    }
+    
+    // MARK: - 특정 User 데이터 가져오기 (fetchRooms에서 사용)
+    func fetchUser(byId userId: String, completion: @escaping (User?) -> Void) {
+        let userRef = db.collection("users").document(userId)
+        
+        userRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching user: \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let document = document, document.exists, let user = try? document.data(as: User.self) else {
+                print("User document does not exist or cannot be decoded.")
+                completion(nil)
+                return
+            }
+            
+            completion(user)
+        }
+    }
+}

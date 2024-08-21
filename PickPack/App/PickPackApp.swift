@@ -17,7 +17,7 @@ struct PickPackApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path){
-                RoomView()
+                MainView()
                     .navigationDestination(for: PickPackView.self){ pickPackView in
                         router.view(for: pickPackView)
                     }

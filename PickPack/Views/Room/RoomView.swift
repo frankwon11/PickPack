@@ -15,6 +15,10 @@ struct RoomView: View {
     
     @State private var offset: CGFloat = 0
     @State private var currentTab: RoomViewTabs = .MyItem
+    @State private var members: [Member] = [
+        Member(id: "1234", user: User(id: "14142", name: "슌"), itemList: ItemList().items, color: .indigo),
+        Member(id: "4321", user: User(id: "42421", name: "세이디"), itemList: ItemList().items, color: .pink)
+    ]
     
     var body: some View {
         // 네비게이션 링크로 들어올거니까 네비게이션스택은 주석
@@ -27,7 +31,7 @@ struct RoomView: View {
             case .MyItem:
                 MyItemView()
             case .FriendItem:
-                Spacer()
+                FriendItemView(members: $members)
             case .SharedItem:
                 Spacer()
             }

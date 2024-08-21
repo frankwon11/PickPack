@@ -14,8 +14,11 @@ class RouterManager: ObservableObject {
         switch route {
         case .mainView:
             MainView()
-        case . roomView:
+        case .roomView:
             RoomView()
+            
+        case .historyView:
+            HistoryView()
         }
     }
     
@@ -42,4 +45,6 @@ enum PickPackView: Hashable {
     case mainView
     
     case roomView
+    
+    case historyView
 }

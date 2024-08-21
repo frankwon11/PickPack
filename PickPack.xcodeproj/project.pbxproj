@@ -53,6 +53,10 @@
 		FB1051002C765A830014097E /* RoomSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F92C765A830014097E /* RoomSettingView.swift */; };
 		FB1051012C765A830014097E /* SettingRoomColorField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050FA2C765A830014097E /* SettingRoomColorField.swift */; };
 		FB1051022C765A830014097E /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050FB2C765A830014097E /* FAQView.swift */; };
+		FB1051082C765B520014097E /* SharedItemNotYet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051042C765B510014097E /* SharedItemNotYet.swift */; };
+		FB1051092C765B520014097E /* SharedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051052C765B510014097E /* SharedItemView.swift */; };
+		FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051062C765B520014097E /* ShareItemDoneList.swift */; };
+		FB10510B2C765B520014097E /* SharedItemNotYetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1051072C765B520014097E /* SharedItemNotYetList.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -105,6 +109,10 @@
 		FB1050F92C765A830014097E /* RoomSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSettingView.swift; sourceTree = "<group>"; };
 		FB1050FA2C765A830014097E /* SettingRoomColorField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingRoomColorField.swift; sourceTree = "<group>"; };
 		FB1050FB2C765A830014097E /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		FB1051042C765B510014097E /* SharedItemNotYet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemNotYet.swift; sourceTree = "<group>"; };
+		FB1051052C765B510014097E /* SharedItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemView.swift; sourceTree = "<group>"; };
+		FB1051062C765B520014097E /* ShareItemDoneList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareItemDoneList.swift; sourceTree = "<group>"; };
+		FB1051072C765B520014097E /* SharedItemNotYetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemNotYetList.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -174,9 +182,10 @@
 		721F5FE02C6FD2AE003606A4 /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				33A069332C76483100EF0F09 /* FriendItem */,
 				721F5FDE2C6FD2AE003606A4 /* RoomView.swift */,
 				721F5FDF2C6FD2AE003606A4 /* RoomViewTabs.swift */,
+				FB1051032C765B2E0014097E /* SharedItem */,
+				33A069332C76483100EF0F09 /* FriendItem */,
 				7243C1492C75E8120087125E /* MyItem */,
 			);
 			path = Room;
@@ -263,6 +272,17 @@
 				FB1050F62C765A830014097E /* SettingView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		FB1051032C765B2E0014097E /* SharedItem */ = {
+			isa = PBXGroup;
+			children = (
+				FB1051042C765B510014097E /* SharedItemNotYet.swift */,
+				FB1051072C765B520014097E /* SharedItemNotYetList.swift */,
+				FB1051052C765B510014097E /* SharedItemView.swift */,
+				FB1051062C765B520014097E /* ShareItemDoneList.swift */,
+			);
+			path = SharedItem;
 			sourceTree = "<group>";
 		};
 		FBBA97232C3821E500473B51 = {
@@ -417,7 +437,9 @@
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				7243C1532C75F4C70087125E /* MySharedItemListView.swift in Sources */,
+				FB1051092C765B520014097E /* SharedItemView.swift in Sources */,
 				33A069322C7643E800EF0F09 /* FirebaseLoginTest.swift in Sources */,
+				FB1051082C765B520014097E /* SharedItemNotYet.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
 				FB1051002C765A830014097E /* RoomSettingView.swift in Sources */,
 				FB1050F12C7641280014097E /* Date+Extension.swift in Sources */,
@@ -427,6 +449,8 @@
 				FB1050FE2C765A830014097E /* SettingDestinationView.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,
 				33A069302C7643AE00EF0F09 /* FirestoreManager.swift in Sources */,
+				FB10510B2C765B520014097E /* SharedItemNotYetList.swift in Sources */,
+				FB10510A2C765B520014097E /* ShareItemDoneList.swift in Sources */,
 				729F67F12C709C7700F470CB /* MyItemView.swift in Sources */,
 				33A0693C2C76483100EF0F09 /* FriendSharedList.swift in Sources */,
 				721F5FE22C6FD2AE003606A4 /* RoomViewTabs.swift in Sources */,

@@ -30,6 +30,7 @@
 		FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BB2C6F33F90014097E /* AddItemSheet.swift */; };
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
+		FB1050EA2C7614A60014097E /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050E92C7614A60014097E /* RouterManager.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -63,6 +64,7 @@
 		FB1050BB2C6F33F90014097E /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB1050C12C6F37EE0014097E /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		FB1050E92C7614A60014097E /* RouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FB1050EB2C7617C80014097E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBBA97542C43C0A500473B51 /* MainView.swift */,
+				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
+				FB16D4662C52AC7D00FD2F7E /* TicketView.swift */,
+				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FB1050EC2C7617F60014097E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		FBBA97232C3821E500473B51 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				33388CD92C67747700DECDC3 /* AppleAuthManager.swift */,
+				FB1050E92C7614A60014097E /* RouterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -203,14 +225,11 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB1050EC2C7617F60014097E /* Login */,
+				FB1050EB2C7617C80014097E /* Main */,
 				4657827C2C75D06B00149EC1 /* CreateRoom */,
 				721F5FE02C6FD2AE003606A4 /* Room */,
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
-				FBBA97542C43C0A500473B51 /* MainView.swift */,
-				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
-				FB16D4662C52AC7D00FD2F7E /* TicketView.swift */,
-				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
-				33388CD32C6760AF00DECDC3 /* AppleLoginView.swift */,
 				FB1050BB2C6F33F90014097E /* AddItemSheet.swift */,
 			);
 			path = Views;
@@ -301,6 +320,7 @@
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				7243C1532C75F4C70087125E /* MySharedItemListView.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
+				FB1050EA2C7614A60014097E /* RouterManager.swift in Sources */,
 				FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */,
 				FB1050C02C6F366C0014097E /* Item.swift in Sources */,
 				FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */,

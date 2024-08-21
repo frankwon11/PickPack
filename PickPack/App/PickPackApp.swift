@@ -12,10 +12,20 @@ struct PickPackApp: App {
     // 사용자 Auth 관리
     @StateObject var authManager: AppleAuthManager = AppleAuthManager()
     
+    @StateObject var router: RouterManager = RouterManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(authManager)
+            NavigationStack(path: $router.path){
+                MainView()
+                    .navigationDestination(for: PickPackView.self){ pickPackView in
+                        router.view(for: pickPackView)
+                    }
+            }
+            .tint(.black)
+            .environmentObject(authManager)
+            .environmentObject(router)
+            
         }
     }
 }

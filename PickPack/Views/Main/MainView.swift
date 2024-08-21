@@ -19,8 +19,6 @@ struct MainView: View {
             
             Spacer().frame(height: 66)
             
-            // TODO: 티켓 분기 처리.
-            // 티켓이 없는 경우 CarouselView 가 아닌 EmptyTicketView를 띄웁니다.
             CarouselView()
                 .padding(.horizontal, -20)
             
@@ -34,6 +32,7 @@ struct MainView: View {
             }
         } // VStack
         .padding(.horizontal, 20)
+        .navigationBarBackButtonHidden()
     }
     
 }

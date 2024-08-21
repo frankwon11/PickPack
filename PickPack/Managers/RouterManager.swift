@@ -14,18 +14,26 @@ class RouterManager: ObservableObject {
         switch route {
         case .mainView:
             MainView()
+            
+        case . roomView:
+            RoomView()
         }
     }
     
-    func push(view: PickPackView){
+    func push(view: PickPackView) {
         path.append(view)
     }
     
-    func pop(){
+    func pop() {
         path.removeLast()
     }
     
-    func backToMap(){
+    func backToRoom() {
+        self.path = NavigationPath()
+        path.append(PickPackView.roomView)
+    }
+    
+    func backToMain() {
         self.path = NavigationPath()
         path.append(PickPackView.mainView)
     }
@@ -34,4 +42,5 @@ class RouterManager: ObservableObject {
 enum PickPackView: Hashable {
     case mainView
     
+    case roomView
 }

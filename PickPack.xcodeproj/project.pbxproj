@@ -167,10 +167,10 @@
 		FB1050EB2C7617C80014097E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FBBA97542C43C0A500473B51 /* MainView.swift */,
+				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
 				FB16D4662C52AC7D00FD2F7E /* TicketView.swift */,
 				FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */,
-				FB16D3E22C4D269400FD2F7E /* CarouselView.swift */,
-				FBBA97542C43C0A500473B51 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";

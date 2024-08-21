@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CarouselView: View {
+    @EnvironmentObject var router: RouterManager
+    
     // TODO: 티켓 데이터 배열 넘기면 알아서 만들어지도록
-    // 아마 티켓을 불러오는 걸 여기서 하면 될 듯
     @GestureState var dragOffset: CGFloat = 0
     
     @State var currentIndex: Int = 0
@@ -36,12 +37,20 @@ struct CarouselView: View {
                 ForEach(0..<pageCount - 1, id: \.self) { pageIndex in
                     TicketView(ticketWidth: pageWidth)
                         .frame(width: pageWidth)
+                        .onTapGesture {
+                            // TODO: 파라미터 추가
+                            router.push(view: .roomView)
+                        }
                 }
                 .contentShape(RoundedRectangle(cornerRadius: 20))
                 
                 EmptyTicketView()
                     .frame(width: pageWidth)
                     .contentShape(RoundedRectangle(cornerRadius: 20))
+                    .onTapGesture {
+                        // TODO: 목적지 변경 파라미터 추가
+                        router.push(view: .roomView)
+                    }
             }
             /// offset을 통해 보이는 곳을 옮깁니다.
             .offset(x: offsetX)

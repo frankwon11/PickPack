@@ -14,16 +14,16 @@ struct MyItemView: View {
     @State private var showAddItemSheet: Bool = false
     // MARK: member가 가지고 있는 item 배열
     @State private var myItem: [Item] = [
-        .init(id: UUID().uuidString, name: "test0", theme: .clothing, isShared: true),
-        .init(id: UUID().uuidString, name: "test1", theme: .clothing),
-        .init(id: UUID().uuidString, name: "test2", theme: .clothing),
-        .init(id: UUID().uuidString, name: "test3", theme: .documents, isShared: true),
-        .init(id: UUID().uuidString, name: "test4", theme: .documents),
-        .init(id: UUID().uuidString, name: "test5", theme: .cosmetics),
-        .init(id: UUID().uuidString, name: "test6", theme: .medication, isShared: true),
-        .init(id: UUID().uuidString, name: "test7", theme: .medication),
-        .init(id: UUID().uuidString, name: "test8", theme: .others),
-        .init(id: UUID().uuidString, name: "test9", theme: .clothing),
+//        .init(id: UUID().uuidString, name: "test0", theme: .clothing, isShared: true),
+//        .init(id: UUID().uuidString, name: "test1", theme: .clothing),
+//        .init(id: UUID().uuidString, name: "test2", theme: .clothing),
+//        .init(id: UUID().uuidString, name: "test3", theme: .documents, isShared: true),
+//        .init(id: UUID().uuidString, name: "test4", theme: .documents),
+//        .init(id: UUID().uuidString, name: "test5", theme: .cosmetics),
+//        .init(id: UUID().uuidString, name: "test6", theme: .medication, isShared: true),
+//        .init(id: UUID().uuidString, name: "test7", theme: .medication),
+//        .init(id: UUID().uuidString, name: "test8", theme: .others),
+//        .init(id: UUID().uuidString, name: "test9", theme: .clothing),
     ]
 
     var body: some View {
@@ -60,7 +60,7 @@ struct MyItemView: View {
         }
         .background(.black1)
         .sheet(isPresented: $showAddItemSheet) {
-            AddItemSheet(isSheetDisplaying: $showAddItemSheet, ticketColor: roomColor)
+            AddItemSheet(items: $myItem, isSheetDisplaying: $showAddItemSheet, roomColor: roomColor)
         }
     }
 }
@@ -76,8 +76,7 @@ extension MyItemView {
                 
                 Label("새로운 짐 추가하기", systemImage: "plus")
                     .font(.subheadline)
-                // MARK: 방 색깔
-                    .foregroundStyle(.indigo)
+                    .foregroundStyle(roomColor)
             }
         }
         .frame(height: 48)

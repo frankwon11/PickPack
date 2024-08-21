@@ -32,6 +32,7 @@ struct MainView: View {
             }
         } // VStack
         .padding(.horizontal, 20)
+        .navigationBarBackButtonHidden()
     }
     
 }

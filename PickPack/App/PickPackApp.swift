@@ -16,9 +16,16 @@ struct PickPackApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(authManager)
-                .environmentObject(router)
+            NavigationStack(path: $router.path){
+                MainView()
+                    .navigationDestination(for: PickPackView.self){ pickPackView in
+                        router.view(for: pickPackView)
+                    }
+            }
+            .tint(.black)
+            .environmentObject(authManager)
+            .environmentObject(router)
+            
         }
     }
 }

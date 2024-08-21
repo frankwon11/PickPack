@@ -14,7 +14,6 @@ class RouterManager: ObservableObject {
         switch route {
         case .mainView:
             MainView()
-            
         case . roomView:
             RoomView()
         }

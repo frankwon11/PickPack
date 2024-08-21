@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoomView: View {
+    @EnvironmentObject var router: RouterManager
+    
     // MARK: 방 이름 받아오기
     private let roomName: String = "순두부 여행"
     // MARK: 방 컬러 받아오기
@@ -17,8 +19,6 @@ struct RoomView: View {
     @State private var currentTab: RoomViewTabs = .MyItem
     
     var body: some View {
-        // 네비게이션 링크로 들어올거니까 네비게이션스택은 주석
-        //        NavigationStack {
         VStack(spacing: 0) {
             segmentedView
             
@@ -38,7 +38,7 @@ struct RoomView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    // TODO: 홈버튼 구현
+                    router.backToMain()
                 } label: {
                     Image(systemName: "house")
                         .font(.title3)
@@ -57,7 +57,6 @@ struct RoomView: View {
                 }
             }
         }
-        //        }
     }
 }
 
@@ -112,7 +111,5 @@ extension RoomView {
 }
 
 #Preview {
-    NavigationStack {
-        RoomView()
-    }
+    RoomView()
 }

@@ -16,8 +16,7 @@ final class FirestoreManager: ObservableObject {
     static let shared = FirestoreManager()
     private init() {}
     
-    // MARK: - 유저 등록
-    
+    // MARK: - 유저 등록(회원가입 시 1회만 실행됨)
     func addUser(id: String, name: String) {
         let usersCollection = db.collection("users")
         
@@ -44,15 +43,83 @@ final class FirestoreManager: ObservableObject {
             }
         }
     }
+}
+
+// MARK: - Create Data
+extension FirestoreManager {
+    // MARK: - Room 생성 및 Firestore에 저장
+    func createRoom(id: String, code: String, startDate: Date, endDate: Date, name: String, color: CustomColor) {
+        let roomData: [String: Any] = [
+            "id": id,
+            "code": code,
+            "startDate": startDate,
+            "endDate": endDate,
+            "name": name,
+            "color": color.rawValue
+        ]
+        
+        let roomRef = db.collection("rooms").document(id)
+        
+        roomRef.setData(roomData) { error in
+            if let error = error {
+                print("Error adding room: \(error.localizedDescription)")
+            } else {
+                print("Room added with ID: \(id)")
+            }
+        }
+    }
     
-    // MARK: - 방 생성
-    // MARK: - 짐 생성
-    // MARK: -
+    // MARK: - 특정 Room에 Member 추가 (하위 컬렉션)
+    func addMember(toRoom roomId: String, member: Member) {
+        let roomRef = db.collection("rooms").document(roomId)
+        let membersCollection = roomRef.collection("members")
+        
+        do {
+            let _ = try membersCollection.document(member.id).setData(from: member)
+            print("Member added with ID: \(member.id) to room \(roomId)")
+        } catch {
+            print("Error adding member: \(error)")
+        }
+    }
     
+    // MARK: - 특정 Room의 SharedItems 하위 컬렉션에 SharedItem 추가
+    func addSharedItem(toRoom roomId: String, sharedItem: SharedItem) {
+        let roomRef = db.collection("rooms").document(roomId)
+        let sharedItemsCollection = roomRef.collection("sharedItems")
+        
+        do {
+            let _ = try sharedItemsCollection.document(sharedItem.id).setData(from: sharedItem)
+            print("Shared item added with ID: \(sharedItem.id) to room \(roomId)")
+        } catch {
+            print("Error adding shared item: \(error)")
+        }
+    }
     
-    
-    
-    
-    
+    // MARK: - 특정 Room의 특정 Member의 itemList에 Item 추가
+    func addItem(toRoom roomId: String, forMember memberId: String, item: Item) {
+        let roomRef = db.collection("rooms").document(roomId)
+        let memberRef = roomRef.collection("members").document(memberId)
+        
+        memberRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching member document: \(error)")
+                return
+            }
+            
+            guard let document = document, document.exists, var member = try? document.data(as: Member.self) else {
+                print("Member document does not exist or cannot be decoded.")
+                return
+            }
+            
+            member.itemList.append(item)
+            
+            do {
+                try memberRef.setData(from: member)
+                print("Item added to member \(memberId) in room \(roomId).")
+            } catch {
+                print("Error updating member document: \(error)")
+            }
+        }
+    }
 }
 

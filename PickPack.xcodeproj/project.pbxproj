@@ -28,6 +28,7 @@
 		33A0693D2C76483100EF0F09 /* FriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069372C76483100EF0F09 /* FriendItemView.swift */; };
 		33A0693E2C76483100EF0F09 /* FriendItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069382C76483100EF0F09 /* FriendItemRowView.swift */; };
 		33A0693F2C76483100EF0F09 /* FriendItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069392C76483100EF0F09 /* FriendItemListView.swift */; };
+		33A069422C764DE300EF0F09 /* RoomCreateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069412C764DE300EF0F09 /* RoomCreateTest.swift */; };
 		4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657827D2C75D07E00149EC1 /* CreateRoomView.swift */; };
 		465782822C75D0C400149EC1 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782812C75D0C400149EC1 /* DestinationView.swift */; };
 		465782842C75D0F100149EC1 /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782832C75D0F100149EC1 /* DurationField.swift */; };
@@ -85,6 +86,7 @@
 		33A069372C76483100EF0F09 /* FriendItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemView.swift; sourceTree = "<group>"; };
 		33A069382C76483100EF0F09 /* FriendItemRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemRowView.swift; sourceTree = "<group>"; };
 		33A069392C76483100EF0F09 /* FriendItemListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemListView.swift; sourceTree = "<group>"; };
+		33A069412C764DE300EF0F09 /* RoomCreateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCreateTest.swift; sourceTree = "<group>"; };
 		4657827D2C75D07E00149EC1 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		465782812C75D0C400149EC1 /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		465782832C75D0F100149EC1 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
@@ -169,6 +171,15 @@
 				33A069392C76483100EF0F09 /* FriendItemListView.swift */,
 			);
 			path = FriendItem;
+			sourceTree = "<group>";
+		};
+		33A069402C764DA300EF0F09 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				33A069312C7643E800EF0F09 /* FirebaseLoginTest.swift */,
+				33A069412C764DE300EF0F09 /* RoomCreateTest.swift */,
+			);
+			path = TestView;
 			sourceTree = "<group>";
 		};
 		4657827C2C75D06B00149EC1 /* CreateRoom */ = {
@@ -334,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1050F42C765A5A0014097E /* Setting */,
+				33A069402C764DA300EF0F09 /* TestView */,
 				FB1050ED2C762ECB0014097E /* History */,
 				FB1050EC2C7617F60014097E /* Login */,
 				FB1050EB2C7617C80014097E /* Main */,
@@ -471,6 +483,7 @@
 				7243C14D2C75E8700087125E /* MyItemListView.swift in Sources */,
 				465782862C75D11600149EC1 /* RoomColorField.swift in Sources */,
 				FB1051022C765A830014097E /* FAQView.swift in Sources */,
+				33A069422C764DE300EF0F09 /* RoomCreateTest.swift in Sources */,
 				721F5FE12C6FD2AE003606A4 /* RoomView.swift in Sources */,
 				FB1050BC2C6F33F90014097E /* AddItemSheet.swift in Sources */,
 				FBBA97302C3821E500473B51 /* PickPackApp.swift in Sources */,

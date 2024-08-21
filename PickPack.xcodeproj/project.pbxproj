@@ -21,7 +21,6 @@
 		33A0692C2C76435F00EF0F09 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 33A0692B2C76435F00EF0F09 /* FirebaseFirestore */; };
 		33A0692E2C76435F00EF0F09 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 33A0692D2C76435F00EF0F09 /* FirebaseFirestoreCombine-Community */; };
 		33A069302C7643AE00EF0F09 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A0692F2C7643AE00EF0F09 /* FirestoreManager.swift */; };
-		33A069322C7643E800EF0F09 /* FirebaseLoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069312C7643E800EF0F09 /* FirebaseLoginTest.swift */; };
 		33A0693A2C76483100EF0F09 /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069342C76483100EF0F09 /* FriendRow.swift */; };
 		33A0693B2C76483100EF0F09 /* FriendItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069352C76483100EF0F09 /* FriendItemList.swift */; };
 		33A0693C2C76483100EF0F09 /* FriendSharedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069362C76483100EF0F09 /* FriendSharedList.swift */; };
@@ -29,6 +28,8 @@
 		33A0693E2C76483100EF0F09 /* FriendItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069382C76483100EF0F09 /* FriendItemRowView.swift */; };
 		33A0693F2C76483100EF0F09 /* FriendItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069392C76483100EF0F09 /* FriendItemListView.swift */; };
 		33A069422C764DE300EF0F09 /* RoomCreateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069412C764DE300EF0F09 /* RoomCreateTest.swift */; };
+		33A069442C767D6300EF0F09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33A069432C767D6300EF0F09 /* GoogleService-Info.plist */; };
+		33A069462C767DD900EF0F09 /* FirebaseLoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A069452C767DD900EF0F09 /* FirebaseLoginTest.swift */; };
 		4657827E2C75D07E00149EC1 /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657827D2C75D07E00149EC1 /* CreateRoomView.swift */; };
 		465782822C75D0C400149EC1 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782812C75D0C400149EC1 /* DestinationView.swift */; };
 		465782842C75D0F100149EC1 /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465782832C75D0F100149EC1 /* DurationField.swift */; };
@@ -47,7 +48,6 @@
 		FB1050EA2C7614A60014097E /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050E92C7614A60014097E /* RouterManager.swift */; };
 		FB1050EF2C762EE10014097E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050EE2C762EE10014097E /* HistoryView.swift */; };
 		FB1050F12C7641280014097E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F02C7641280014097E /* Date+Extension.swift */; };
-		FB1050F32C764F0E0014097E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1050F22C764F0D0014097E /* GoogleService-Info.plist */; };
 		FB1050FC2C765A830014097E /* SettingRoomNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F52C765A830014097E /* SettingRoomNameField.swift */; };
 		FB1050FD2C765A830014097E /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F62C765A830014097E /* SettingView.swift */; };
 		FB1050FE2C765A830014097E /* SettingDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050F72C765A830014097E /* SettingDestinationView.swift */; };
@@ -79,7 +79,6 @@
 		33A068E72C75C9E900EF0F09 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		33A069222C7642C600EF0F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33A0692F2C7643AE00EF0F09 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
-		33A069312C7643E800EF0F09 /* FirebaseLoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginTest.swift; sourceTree = "<group>"; };
 		33A069342C76483100EF0F09 /* FriendRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 		33A069352C76483100EF0F09 /* FriendItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemList.swift; sourceTree = "<group>"; };
 		33A069362C76483100EF0F09 /* FriendSharedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSharedList.swift; sourceTree = "<group>"; };
@@ -87,6 +86,8 @@
 		33A069382C76483100EF0F09 /* FriendItemRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemRowView.swift; sourceTree = "<group>"; };
 		33A069392C76483100EF0F09 /* FriendItemListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItemListView.swift; sourceTree = "<group>"; };
 		33A069412C764DE300EF0F09 /* RoomCreateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCreateTest.swift; sourceTree = "<group>"; };
+		33A069432C767D6300EF0F09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "PickPack/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		33A069452C767DD900EF0F09 /* FirebaseLoginTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginTest.swift; sourceTree = "<group>"; };
 		4657827D2C75D07E00149EC1 /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
 		465782812C75D0C400149EC1 /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		465782832C75D0F100149EC1 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		FB1050E92C7614A60014097E /* RouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
 		FB1050EE2C762EE10014097E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		FB1050F02C7641280014097E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		FB1050F22C764F0D0014097E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB1050F52C765A830014097E /* SettingRoomNameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingRoomNameField.swift; sourceTree = "<group>"; };
 		FB1050F62C765A830014097E /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		FB1050F72C765A830014097E /* SettingDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDestinationView.swift; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 		33A069402C764DA300EF0F09 /* TestView */ = {
 			isa = PBXGroup;
 			children = (
-				33A069312C7643E800EF0F09 /* FirebaseLoginTest.swift */,
 				33A069412C764DE300EF0F09 /* RoomCreateTest.swift */,
+				33A069452C767DD900EF0F09 /* FirebaseLoginTest.swift */,
 			);
 			path = TestView;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 		FB1050B32C6CE6420014097E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FB1050F22C764F0D0014097E /* GoogleService-Info.plist */,
+				33A069432C767D6300EF0F09 /* GoogleService-Info.plist */,
 				FB1050B62C6CE7B70014097E /* PickPack.entitlements */,
 				FBBA972F2C3821E500473B51 /* PickPackApp.swift */,
 			);
@@ -354,7 +354,6 @@
 				FBBA97312C3821E500473B51 /* ContentView.swift */,
 				FB1050BB2C6F33F90014097E /* AddItemSheet.swift */,
 				724A45F12C767590000AE2ED /* CustomItemAddView.swift */,
-				33A069312C7643E800EF0F09 /* FirebaseLoginTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A069232C7642C600EF0F09 /* Assets.xcassets in Resources */,
-				FB1050F32C764F0E0014097E /* GoogleService-Info.plist in Resources */,
+				33A069442C767D6300EF0F09 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A069462C767DD900EF0F09 /* FirebaseLoginTest.swift in Sources */,
 				465782882C75D12B00149EC1 /* RoomNameField.swift in Sources */,
 				33A0693D2C76483100EF0F09 /* FriendItemView.swift in Sources */,
 				33A068E42C75C65700EF0F09 /* SharedItem.swift in Sources */,
@@ -456,7 +456,6 @@
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,
 				7243C1532C75F4C70087125E /* MySharedItemListView.swift in Sources */,
 				FB1051092C765B520014097E /* SharedItemView.swift in Sources */,
-				33A069322C7643E800EF0F09 /* FirebaseLoginTest.swift in Sources */,
 				FB1051082C765B520014097E /* SharedItemNotYet.swift in Sources */,
 				33388CD82C67662600DECDC3 /* KeychainHelper.swift in Sources */,
 				FB1051002C765A830014097E /* RoomSettingView.swift in Sources */,

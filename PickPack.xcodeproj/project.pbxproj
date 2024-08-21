@@ -31,6 +31,7 @@
 		FB1050C02C6F366C0014097E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050BF2C6F366C0014097E /* Item.swift */; };
 		FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050C12C6F37EE0014097E /* ItemList.swift */; };
 		FB1050EA2C7614A60014097E /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050E92C7614A60014097E /* RouterManager.swift */; };
+		FB1050EF2C762EE10014097E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1050EE2C762EE10014097E /* HistoryView.swift */; };
 		FB16D3E32C4D269400FD2F7E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D3E22C4D269400FD2F7E /* CarouselView.swift */; };
 		FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4662C52AC7D00FD2F7E /* TicketView.swift */; };
 		FB16D4692C52ADB800FD2F7E /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */; };
@@ -65,6 +66,7 @@
 		FB1050BF2C6F366C0014097E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB1050C12C6F37EE0014097E /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		FB1050E92C7614A60014097E /* RouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
+		FB1050EE2C762EE10014097E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		FB16D3E22C4D269400FD2F7E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		FB16D4662C52AC7D00FD2F7E /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		FB16D4682C52ADB800FD2F7E /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FB1050ED2C762ECB0014097E /* History */ = {
+			isa = PBXGroup;
+			children = (
+				FB1050EE2C762EE10014097E /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		FBBA97232C3821E500473B51 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		FBBA97512C43B88300473B51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB1050ED2C762ECB0014097E /* History */,
 				FB1050EC2C7617F60014097E /* Login */,
 				FB1050EB2C7617C80014097E /* Main */,
 				4657827C2C75D06B00149EC1 /* CreateRoom */,
@@ -315,6 +326,7 @@
 				FB16D4672C52AC7D00FD2F7E /* TicketView.swift in Sources */,
 				FBBA97322C3821E500473B51 /* ContentView.swift in Sources */,
 				33A068E22C75C35D00EF0F09 /* User.swift in Sources */,
+				FB1050EF2C762EE10014097E /* HistoryView.swift in Sources */,
 				33A068E02C75C2B900EF0F09 /* Member.swift in Sources */,
 				FB1050C22C6F37EE0014097E /* ItemList.swift in Sources */,
 				465782842C75D0F100149EC1 /* DurationField.swift in Sources */,

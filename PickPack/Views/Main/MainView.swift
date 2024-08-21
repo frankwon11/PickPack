@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var authManager: AppleAuthManager
+    @EnvironmentObject var router: RouterManager
+    
     @State private var currentIndex = 0
     
     var body: some View {
@@ -86,7 +88,7 @@ extension MainView {
             HStack {
                 Spacer()
                 Button {
-                    // TODO: 지난 여행 페이지로 이동; 네비게이션 링크로 변경
+                    router.push(view: .historyView)
                 } label: {
                     HStack {
                         Image(systemName: "clock")

@@ -14,7 +14,7 @@ struct SharedItem: Identifiable, Codable, Hashable {
     
     var item: Item
     
-    var owner: Member
+    var ownerId: String
     
-    var sharedMemberList: [Member]
+    var sharedMemberIdList: [String]
 }

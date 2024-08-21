@@ -39,37 +39,8 @@ struct SharedItemView: View {
                 isPacked: true,
                 quantity: 10
             ),
-            owner: Member(
-                id: UUID().uuidString,
-                user: User(
-                    id: UUID().uuidString,
-                    name: "Aiden"
-                ),
-                itemList: [],
-                color: .purple
-                
-            ),
-            sharedMemberList: [
-                Member(
-                    id: UUID().uuidString,
-                    user: User(
-                        id: UUID().uuidString,
-                        name: "Brandon"
-                    ),
-                    itemList: [],
-                    color: .blue
-                    
-                ),
-                Member(
-                    id: UUID().uuidString,
-                    user: User(
-                        id: UUID().uuidString,
-                        name: "Hazel"
-                    ),
-                    itemList: [],
-                    color:.indigo
-                )
-            ]
+            ownerId: UUID().uuidString,
+            sharedMemberIdList: []
         )
     ]
 

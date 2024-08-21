@@ -37,9 +37,14 @@ struct PickPackApp: App {
             .tint(.black)
             .environmentObject(authManager)
             .environmentObject(router)
-//            FirebaseLoginTest()
-//                .environmentObject(authManager)
             
+// AppleLogin + FirebaseAuth Test
+//           FirebaseLoginTest()
+//                .environmentObject(authManager)
+// FirestoreManager Test
+//           RoomCreateTest()
+//                .environmentObject(authManager)
+
             
         }
     }

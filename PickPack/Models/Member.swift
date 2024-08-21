@@ -15,4 +15,9 @@ struct Member: Identifiable, Codable, Hashable {
     var itemList: [Item]
     
     var color: CustomColor
+    
+    // Item을 itemList에 추가하는 메서드
+    mutating func addItem(_ item: Item) {
+        itemList.append(item)
+    }
 }

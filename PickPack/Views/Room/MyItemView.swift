@@ -254,11 +254,15 @@ struct MyItemRow: View {
             
             Spacer()
             
-            if item.isHidden {
+            switch item.state {
+            case .normal:
+                EmptyView()
+            case .hidden:
                 Image(systemName: "eye.slash.fill")
                     .font(.subheadline)
                     .foregroundStyle(.black4)
-            } else if item.isShared {
+            
+            case .shared:
                 Image(systemName: "arrow.2.squarepath")
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -267,15 +271,32 @@ struct MyItemRow: View {
             
             // MARK: ellipsis에 뭐 들어갈지 아직 몰라서 임시로 Menu 넣음
             Menu {
-                Button {
-                    item.isHidden.toggle()
-                } label: {
-                    Text("hidden")
-                }
-                Button {
-                    item.isShared.toggle()
-                } label: {
-                    Text("shared")
+                Picker("", selection: $item.state) {
+                    Button {
+                        item.isShared = false
+                        item.isHidden = false
+                    } label: {
+                        Text("선택 안함")
+                    }
+                    .tag(itemState.normal)
+                    
+                    Divider()
+                    
+                    Button {
+                        item.isShared = true
+                        item.isHidden = false
+                    } label: {
+                        Label("shared", systemImage: "arrow.2.squarepath")
+                    }
+                    .tag(itemState.shared)
+                    
+                    Button {
+                        item.isShared = false
+                        item.isHidden = true
+                    } label: {
+                        Label("hidden", systemImage: "eye.slash.fill")
+                    }
+                    .tag(itemState.hidden)
                 }
             } label: {
                 Image(systemName: "ellipsis")
@@ -293,4 +314,10 @@ struct MyItemRow: View {
     NavigationStack {
         RoomView()
     }
+}
+
+enum itemState: Codable {
+    case shared
+    case hidden
+    case normal
 }

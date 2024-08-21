@@ -21,6 +21,8 @@ struct Item: Identifiable, Codable {
     var isPacked: Bool = false
     
     var quantity: Int = 1
+    
+    var state: itemState = .normal
 }
 
 enum ItemTheme: String, Codable, CaseIterable {

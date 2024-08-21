@@ -28,17 +28,17 @@ struct PickPackApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            NavigationStack(path: $router.path){
-//                MainView()
-//                    .navigationDestination(for: PickPackView.self){ pickPackView in
-//                        router.view(for: pickPackView)
-//                    }
-//            }
-//            .tint(.black)
-//            .environmentObject(authManager)
-//            .environmentObject(router)
-            FirebaseLoginTest()
-                .environmentObject(authManager)
+            NavigationStack(path: $router.path){
+                MainView()
+                    .navigationDestination(for: PickPackView.self){ pickPackView in
+                        router.view(for: pickPackView)
+                    }
+            }
+            .tint(.black)
+            .environmentObject(authManager)
+            .environmentObject(router)
+//            FirebaseLoginTest()
+//                .environmentObject(authManager)
             
             
         }
